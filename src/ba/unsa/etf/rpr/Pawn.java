@@ -3,8 +3,8 @@ package ba.unsa.etf.rpr;
 public class Pawn extends ChessPiece {
 
     private boolean provjeriPomak(String pozicija2, Color boja2){
-        if(boja2 == Color.WHITE && (pozicija2.charAt(1)-this.position.charAt(1)) != 1) return false;
-        if(boja2 == Color.BLACK && (pozicija2.charAt(1)-this.position.charAt(1)) != -1) return false;
+        if(boja2 == Color.WHITE && (pozicija2.charAt(1)-this.position.charAt(1)) != 2) return false;
+        if(boja2 == Color.BLACK && (pozicija2.charAt(1)-this.position.charAt(1)) != -2) return false;
         return true;
     }
     Pawn(String pozicija1, Color boja1) {
