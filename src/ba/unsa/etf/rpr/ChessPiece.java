@@ -3,10 +3,10 @@ package ba.unsa.etf.rpr;
 public abstract class ChessPiece {
     public static enum Color {BLACK, WHITE};
 
-    private String position;
-    private Color color;
+    protected String position;
+    protected Color color;
 
-    private boolean ispravnostPozicije(String pozicija2) {
+    protected boolean ispravnostPozicije(String pozicija2) {
         if ((pozicija2.charAt(0) < 'A' || pozicija2.charAt(0) > 'H') ||
                 (pozicija2.charAt(1) < '1' || pozicija2.charAt(1) > '8'))
             return false;
