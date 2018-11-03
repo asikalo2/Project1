@@ -10,6 +10,8 @@ public class King extends ChessPiece {
 
     King(String pozicija1, Color boja1) {
         super(pozicija1, boja1);
+
+        if (pozicija1.equals("")) throw new IllegalArgumentException("Neispravan unos!");
     }
 
     @Override
