@@ -1,6 +1,10 @@
 package ba.unsa.etf.rpr;
 
-public class Bishop extends Chesspiece  {
+public class Bishop extends ChessPiece {
+
+    Bishop(String pozicija1, Color boja1) {
+        super(pozicija1, boja1);
+    }
 
     @Override
     public String getPosition() {

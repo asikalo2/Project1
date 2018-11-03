@@ -1,6 +1,10 @@
 package ba.unsa.etf.rpr;
 
-public class Knight extends Chesspiece {
+public class Knight extends ChessPiece {
+    Knight(String pozicija1, Color boja1) {
+        super(pozicija1, boja1);
+    }
+
     @Override
     public String getPosition() {
         return null;

@@ -1,6 +1,10 @@
 package ba.unsa.etf.rpr;
 
-public class Pawn extends Chesspiece {
+public class Pawn extends ChessPiece {
+    Pawn(String pozicija1, Color boja1) {
+        super(pozicija1, boja1);
+    }
+
     @Override
     public String getPosition() {
         return null;
