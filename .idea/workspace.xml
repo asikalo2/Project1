@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="992aba34-5bb5-4ebc-a76c-cedfa98b0117" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Pawn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/rpr-zadaca1/ba/unsa/etf/rpr/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/rpr-zadaca1/ba/unsa/etf/rpr/Board.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/rpr-zadaca1/ba/unsa/etf/rpr/ChessPiece.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/rpr-zadaca1/ba/unsa/etf/rpr/ChessPiece.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/rpr-zadaca1/ba/unsa/etf/rpr/Pawn.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/rpr-zadaca1/ba/unsa/etf/rpr/Pawn.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/King.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/King.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,14 +25,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1285" />
-          <entry key="txt" value="259" />
+          <entry key="java" value="1531" />
+          <entry key="txt" value="404" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1285" />
-          <entry key="PLAIN_TEXT" value="259" />
+          <entry key="JAVA" value="1531" />
+          <entry key="PLAIN_TEXT" value="404" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -65,18 +67,18 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/King.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+            <state relative-caret-position="480">
+              <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
               <folding>
                 <element signature="e#105#106#0" expanded="true" />
                 <element signature="e#144#145#0" expanded="true" />
-                <element signature="e#111#112#0" expanded="true" />
-                <element signature="e#138#139#0" expanded="true" />
-                <element signature="e#183#184#0" expanded="true" />
-                <element signature="e#210#211#0" expanded="true" />
+                <element signature="e#572#573#0" expanded="true" />
+                <element signature="e#608#609#0" expanded="true" />
+                <element signature="e#653#654#0" expanded="true" />
+                <element signature="e#686#687#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -99,11 +101,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Pawn.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="86" selection-start-line="6" selection-start-column="86" selection-end-line="6" selection-end-column="86" />
+            <state relative-caret-position="123">
+              <caret line="24" column="38" lean-forward="true" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
               <folding>
                 <element signature="e#105#106#0" expanded="true" />
                 <element signature="e#144#145#0" expanded="true" />
@@ -134,15 +136,6 @@
                 <element signature="e#98#99#0" expanded="true" />
                 <element signature="e#119#120#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/ba/unsa/etf/rpr/PawnTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="34" lean-forward="true" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -187,7 +180,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Bishop.java" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Main.java" />
-        <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/King.java" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Knight.java" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Queen.java" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Rook.java" />
@@ -196,6 +188,7 @@
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/IllegalChessMoveException.java" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Board.java" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Pawn.java" />
+        <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/King.java" />
       </list>
     </option>
   </component>
@@ -258,7 +251,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541266881704" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541268022303" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -329,7 +322,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1541262119649</updated>
-      <workItem from="1541262131919" duration="4710000" />
+      <workItem from="1541262131919" duration="5803000" />
     </task>
     <task id="LOCAL-00001" summary="Added classes for all the chess pieces.">
       <created>1541262237661</created>
@@ -359,16 +352,26 @@
       <option name="project" value="LOCAL" />
       <updated>1541265941264</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Stavljene metode iz testova za Board klasu. Kod se sada builda i napravio move za Pawn klasu tako da prolaze testovi.">
+      <created>1541266967083</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1541266967083</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
     <history-entry file="PawnTest - 2018.11.03 at 18h 40m 35s.xml">
       <configuration name="PawnTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="PawnTest - 2018.11.03 at 18h 41m 24s.xml">
+      <configuration name="PawnTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4710000" />
+    <option name="totallyTimeSpent" value="5803000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
@@ -379,7 +382,7 @@
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Messages" weight="0.3295082" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
@@ -388,7 +391,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295082" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3295082" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3295082" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -446,7 +449,8 @@
     <MESSAGE value="Uredjivanje apstraktne metode ChessPiece" />
     <MESSAGE value="Uredjivanje izvedene klase Pawn" />
     <MESSAGE value="Uredjivanje izvedene klase Pawn finalno." />
-    <option name="LAST_COMMIT_MESSAGE" value="Uredjivanje izvedene klase Pawn finalno." />
+    <MESSAGE value="Stavljene metode iz testova za Board klasu. Kod se sada builda i napravio move za Pawn klasu tako da prolaze testovi." />
+    <option name="LAST_COMMIT_MESSAGE" value="Stavljene metode iz testova za Board klasu. Kod se sada builda i napravio move za Pawn klasu tako da prolaze testovi." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Queen.java">
@@ -534,21 +538,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/King.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-          <folding>
-            <element signature="e#105#106#0" expanded="true" />
-            <element signature="e#144#145#0" expanded="true" />
-            <element signature="e#111#112#0" expanded="true" />
-            <element signature="e#138#139#0" expanded="true" />
-            <element signature="e#183#184#0" expanded="true" />
-            <element signature="e#210#211#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/ChessPiece.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -583,8 +572,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Pawn.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="86" selection-start-line="6" selection-start-column="86" selection-end-line="6" selection-end-column="86" />
+        <state relative-caret-position="123">
+          <caret line="24" column="38" lean-forward="true" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
           <folding>
             <element signature="e#105#106#0" expanded="true" />
             <element signature="e#144#145#0" expanded="true" />
@@ -592,6 +581,21 @@
             <element signature="e#138#139#0" expanded="true" />
             <element signature="e#183#184#0" expanded="true" />
             <element signature="e#210#211#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/King.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+          <folding>
+            <element signature="e#105#106#0" expanded="true" />
+            <element signature="e#144#145#0" expanded="true" />
+            <element signature="e#572#573#0" expanded="true" />
+            <element signature="e#608#609#0" expanded="true" />
+            <element signature="e#653#654#0" expanded="true" />
+            <element signature="e#686#687#0" expanded="true" />
           </folding>
         </state>
       </provider>
