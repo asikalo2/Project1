@@ -3,8 +3,8 @@ package ba.unsa.etf.rpr;
 public class King extends ChessPiece {
 
     private boolean provjeriPomak(String pozicija2){
-        if((pozicija2.charAt(1)-this.position.charAt(1)) != 2) ||
-        (pozicija2.charAt(1)-this.position.charAt(1)) != -2)) return false;
+        if(((pozicija2.charAt(1)-this.position.charAt(1)) != 2) || ((pozicija2.charAt(1)-this.position.charAt(1)) != -2)) {
+            return false; }
         return true;
     }
 
@@ -25,7 +25,7 @@ public class King extends ChessPiece {
     @Override
     public void move(String position) {
         if (!ispravnostPozicije(position)) throw new IllegalArgumentException("Neispravna pozicija!");
-        if(!provjeriPomak(position, Color.WHITE)) throw new IllegalChessMoveException ("Neispravan potez!");
+        if(!provjeriPomak(position)) throw new IllegalChessMoveException ("Neispravan potez!");
             this.position=position;
         }
 }
