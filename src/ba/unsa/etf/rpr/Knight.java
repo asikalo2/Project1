@@ -4,9 +4,22 @@ public class Knight extends ChessPiece {
 
     private boolean provjeriPomak(String pozicija2){
 
-        if(((pozicija2.charAt(1)-this.position.charAt(1)) != 2) ||
-                ((pozicija2.charAt(1)-this.position.charAt(1)) != -2)) {
-            return false; }
+        if (((pozicija2.charAt(0) - this.position.charAt(0)) != 1) ||
+                ((pozicija2.charAt(0) - this.position.charAt(0)) != -1) ||
+                ((pozicija2.charAt(0) - this.position.charAt(0)) != 2) ||
+                ((pozicija2.charAt(0) - this.position.charAt(0)) != -2)) return false;
+
+        if (((pozicija2.charAt(0) - this.position.charAt(0)) == 1) ||
+        ((pozicija2.charAt(0) - this.position.charAt(0)) == -1)){
+            if (((pozicija2.charAt(1) - this.position.charAt(1)) != 2) ||
+                    ((pozicija2.charAt(1) - this.position.charAt(1)) != -2)) return false;
+        }
+
+        if (((pozicija2.charAt(0) - this.position.charAt(0)) != 2) ||
+                ((pozicija2.charAt(0) - this.position.charAt(0)) != -2)) {
+            if (((pozicija2.charAt(1) - this.position.charAt(1)) != 1) ||
+                    ((pozicija2.charAt(1) - this.position.charAt(1)) != -1)) return false;
+        }
         return true;
     }
 
