@@ -7,7 +7,7 @@ public class Bishop extends ChessPiece {
         int razlikaX = Math.abs(pozicija2.charAt(0) - this.position.charAt(0));
         int razlikaY = Math.abs(pozicija2.charAt(1) - this.position.charAt(1));
 
-        if(razlikaX == razlikaY) return true;
+        if(Math.abs(razlikaX) == Math.abs(razlikaY)) return true;
 
         return false;
     }
