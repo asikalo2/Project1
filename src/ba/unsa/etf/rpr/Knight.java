@@ -4,23 +4,13 @@ public class Knight extends ChessPiece {
 
     private boolean provjeriPomak(String pozicija2){
 
-        if (((pozicija2.charAt(0) - this.position.charAt(0)) != 1) ||
-                ((pozicija2.charAt(0) - this.position.charAt(0)) != -1) ||
-                ((pozicija2.charAt(0) - this.position.charAt(0)) != 2) ||
-                ((pozicija2.charAt(0) - this.position.charAt(0)) != -2)) return false;
+        int razlikaX = Math.abs(pozicija2.charAt(0) - this.position.charAt(0));
+        int razlikaY = Math.abs(pozicija2.charAt(1) - this.position.charAt(1));
 
-        if (((pozicija2.charAt(0) - this.position.charAt(0)) == 1) ||
-        ((pozicija2.charAt(0) - this.position.charAt(0)) == -1)){
-            if (((pozicija2.charAt(1) - this.position.charAt(1)) != 2) ||
-                    ((pozicija2.charAt(1) - this.position.charAt(1)) != -2)) return false;
-        }
+        if ((razlikaX == 2 && razlikaY == 1) || (razlikaX == 1 && razlikaY == 2))
+            return true;
 
-        if (((pozicija2.charAt(0) - this.position.charAt(0)) != 2) ||
-                ((pozicija2.charAt(0) - this.position.charAt(0)) != -2)) {
-            if (((pozicija2.charAt(1) - this.position.charAt(1)) != 1) ||
-                    ((pozicija2.charAt(1) - this.position.charAt(1)) != -1)) return false;
-        }
-        return true;
+        return false;
     }
 
     Knight(String pozicija1, Color boja1) {

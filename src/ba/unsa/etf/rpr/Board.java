@@ -1,6 +1,8 @@
 package ba.unsa.etf.rpr;
 
 public class Board {
+
+    
     public boolean isCheck(ChessPiece.Color white) {
         return false;
     }

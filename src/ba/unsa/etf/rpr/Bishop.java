@@ -3,7 +3,11 @@ package ba.unsa.etf.rpr;
 public class Bishop extends ChessPiece {
 
     private boolean provjeriPomak(String pozicija2){
+        int i=0;
 
+        for(i=0; i<8; i++){
+
+        }
         if(pozicija2.charAt(0) == this.position.charAt(0)) return false;
 
         return true;
