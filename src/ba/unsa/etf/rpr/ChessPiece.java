@@ -7,7 +7,7 @@ public abstract class ChessPiece {
     protected Color color;
 
     protected boolean ispravnostPozicije(String pozicija2) {
-        if ((pozicija2.charAt(0) < 'A' || pozicija2.charAt(0) > 'H') ||
+        if (pozicija2.equals("") || (pozicija2.charAt(0) < 'A' || pozicija2.charAt(0) > 'H') ||
                 (pozicija2.charAt(1) < '1' || pozicija2.charAt(1) > '8'))
             return false;
         return true;
