@@ -3,14 +3,13 @@ package ba.unsa.etf.rpr;
 public class Bishop extends ChessPiece {
 
     private boolean provjeriPomak(String pozicija2){
-        int i=0;
 
-        for(i=0; i<8; i++){
+        int razlikaX = Math.abs(pozicija2.charAt(0) - this.position.charAt(0));
+        int razlikaY = Math.abs(pozicija2.charAt(1) - this.position.charAt(1));
 
-        }
-        if(pozicija2.charAt(0) == this.position.charAt(0)) return false;
+        if(razlikaX == razlikaY) return true;
 
-        return true;
+        return false;
     }
 
     Bishop(String pozicija1, Color boja1) {

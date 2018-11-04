@@ -2,12 +2,20 @@ package ba.unsa.etf.rpr;
 
 public class Rook extends ChessPiece {
 
-    private boolean provjeriPomak(String pozicija2){
+ private boolean provjeriPomak(String pozicija2){
 
-        if(pozicija2.charAt(0) != this.position.charAt(0)) return false;
+            int razlikaX = Math.abs(pozicija2.charAt(0) - this.position.charAt(0));
+            int razlikaY = Math.abs(pozicija2.charAt(1) - this.position.charAt(1));
 
-        return true;
-    }
+            if(razlikaX == 0){
+                if(razlikaY != 0) return true;
+            }
+
+            if(razlikaY == 0){
+                if(razlikaX != 0) return true;
+            }
+            return false;
+        }
 
     Rook(String pozicija1, Color boja1) {
         super(pozicija1, boja1);
