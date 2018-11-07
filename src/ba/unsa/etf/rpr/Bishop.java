@@ -16,7 +16,6 @@ public class Bishop extends ChessPiece {
 
         super(pozicija1, boja1);
     }
-
     @Override
     public String getPosition() {
         return this.position;

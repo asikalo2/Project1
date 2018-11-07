@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="992aba34-5bb5-4ebc-a76c-cedfa98b0117" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/rpr-zadaca1/ba/unsa/etf/rpr/ChessPiece.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/rpr-zadaca1/ba/unsa/etf/rpr/ChessPiece.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Bishop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Bishop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Board.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,34 +17,37 @@
     <session id="-1723682226">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.113" value="1" />
           <entry key="project.open.time.163" value="1" />
           <entry key="project.open.time.18" value="2" />
+          <entry key="project.open.time.20" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.68" value="1" />
           <entry key="project.open.time.70" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="2488" />
+          <entry key="java" value="2999" />
           <entry key="txt" value="505" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2488" />
+          <entry key="JAVA" value="2999" />
           <entry key="PLAIN_TEXT" value="505" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="35" />
+          <entry key="java" value="44" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="35" />
+          <entry key="JAVA" value="44" />
         </counts>
       </usages-collector>
     </session>
@@ -59,11 +63,87 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Pawn.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Board.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#158#170#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Bishop.java">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+              <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Program.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Queen.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="9" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Rook.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/King.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Knight.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/ChessPiece.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -88,13 +168,13 @@
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Chesspiece.java" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/IllegalChessMoveException.java" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Pawn.java" />
-        <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Board.java" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Knight.java" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/King.java" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Rook.java" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Queen.java" />
-        <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Bishop.java" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/ChessPiece.java" />
+        <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Bishop.java" />
+        <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Board.java" />
       </list>
     </option>
   </component>
@@ -117,6 +197,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -151,13 +232,12 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541347530566" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541607371507" />
     <property name="last_opened_file_path" value="$USER_HOME$/Documents" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -180,9 +260,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.KingTest">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ba.unsa.etf.rpr.Main" />
+  <component name="RunManager" selected="JUnit.BoardTest">
+    <configuration name="BoardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rpr-zadaca1" />
       <extension name="coverage">
         <pattern>
@@ -190,6 +269,8 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="ba.unsa.etf.rpr" />
+      <option name="MAIN_CLASS_NAME" value="ba.unsa.etf.rpr.BoardTest" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -255,19 +336,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.PawnTest" />
       <item itemvalue="JUnit.KingTest" />
       <item itemvalue="JUnit.KnightTest" />
       <item itemvalue="JUnit.[engine:junit-jupiter]/[class:ba.unsa.etf.rpr.KnightTest]" />
+      <item itemvalue="JUnit.BoardTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BoardTest" />
         <item itemvalue="JUnit.KingTest" />
         <item itemvalue="JUnit.KnightTest" />
         <item itemvalue="JUnit.[engine:junit-jupiter]/[class:ba.unsa.etf.rpr.KnightTest]" />
         <item itemvalue="JUnit.PawnTest" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -286,6 +367,9 @@
       <workItem from="1541280850020" duration="3083000" />
       <workItem from="1541334615660" duration="2209000" />
       <workItem from="1541345807656" duration="1517000" />
+      <workItem from="1541601789738" duration="2720000" />
+      <workItem from="1541605259700" duration="367000" />
+      <workItem from="1541606981231" duration="263000" />
     </task>
     <task id="LOCAL-00001" summary="Added classes for all the chess pieces.">
       <created>1541262237661</created>
@@ -407,13 +491,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16719000" />
+    <option name="totallyTimeSpent" value="20069000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1376" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13221884" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13677812" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -422,7 +506,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295082" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3295082" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3295082" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -431,7 +515,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.3295082" />
+      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.3295082" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -513,49 +597,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
           <caret line="64" column="73" selection-start-line="64" selection-start-column="73" selection-end-line="64" selection-end-column="73" />
-          <folding>
-            <element signature="e#828#829#0" expanded="true" />
-            <element signature="e#852#853#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/IllegalChessMoveException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Pawn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="61" selection-start-line="38" selection-start-column="61" selection-end-line="38" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Rook.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="38" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Queen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="9" selection-end-column="45" />
-          <folding>
-            <element signature="e#803#804#0" expanded="true" />
-            <element signature="e#839#840#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -573,10 +614,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/IllegalChessMoveException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="61" selection-start-line="38" selection-start-column="61" selection-end-line="38" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Pawn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Bishop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Program.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Queen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="9" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Rook.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/King.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="62" selection-start-line="15" selection-start-column="7" selection-end-line="16" selection-end-column="62" />
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
@@ -584,13 +674,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Bishop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="32" lean-forward="true" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -603,8 +686,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="204">
+          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#158#170#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
