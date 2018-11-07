@@ -1,6 +1,7 @@
 package ba.unsa.etf.rpr;
 
 public class Bishop extends ChessPiece {
+    int i=0;
 
     private boolean provjeriPomak(String pozicija2){
 
