@@ -7,6 +7,42 @@ public class Board {
 
     private List<ChessPiece> spisak_figura = new ArrayList<ChessPiece>();
 
+    public Board() {
+        spisak_figura.add(new Rook("A1", ChessPiece.Color.WHITE));
+        spisak_figura.add(new Rook("H1", ChessPiece.Color.WHITE));
+        spisak_figura.add(new Bishop("C1", ChessPiece.Color.WHITE));
+        spisak_figura.add(new Bishop("F1", ChessPiece.Color.WHITE));
+        spisak_figura.add(new Knight("B1", ChessPiece.Color.WHITE));
+        spisak_figura.add(new Knight("G1", ChessPiece.Color.WHITE));
+        spisak_figura.add(new King("E1", ChessPiece.Color.WHITE));
+        spisak_figura.add(new Queen("D1", ChessPiece.Color.WHITE));
+        spisak_figura.add(new Pawn("A2", ChessPiece.Color.WHITE));
+        spisak_figura.add(new Pawn("B2", ChessPiece.Color.WHITE));
+        spisak_figura.add(new Pawn("C2", ChessPiece.Color.WHITE));
+        spisak_figura.add(new Pawn("D2", ChessPiece.Color.WHITE));
+        spisak_figura.add(new Pawn("E2", ChessPiece.Color.WHITE));
+        spisak_figura.add(new Pawn("F2", ChessPiece.Color.WHITE));
+        spisak_figura.add(new Pawn("G2", ChessPiece.Color.WHITE));
+        spisak_figura.add(new Pawn("H2", ChessPiece.Color.WHITE));
+
+        spisak_figura.add(new Rook("A8", ChessPiece.Color.BLACK));
+        spisak_figura.add(new Rook("H8", ChessPiece.Color.BLACK));
+        spisak_figura.add(new Bishop("C8", ChessPiece.Color.BLACK));
+        spisak_figura.add(new Bishop("F8", ChessPiece.Color.BLACK));
+        spisak_figura.add(new Knight("B8", ChessPiece.Color.BLACK));
+        spisak_figura.add(new Knight("G8", ChessPiece.Color.BLACK));
+        spisak_figura.add(new King("E8", ChessPiece.Color.BLACK));
+        spisak_figura.add(new Queen("D8", ChessPiece.Color.BLACK));
+        spisak_figura.add(new Pawn("A7", ChessPiece.Color.BLACK));
+        spisak_figura.add(new Pawn("B7", ChessPiece.Color.BLACK));
+        spisak_figura.add(new Pawn("C7", ChessPiece.Color.BLACK));
+        spisak_figura.add(new Pawn("D7", ChessPiece.Color.BLACK));
+        spisak_figura.add(new Pawn("E7", ChessPiece.Color.BLACK));
+        spisak_figura.add(new Pawn("F7", ChessPiece.Color.BLACK));
+        spisak_figura.add(new Pawn("G7", ChessPiece.Color.BLACK));
+        spisak_figura.add(new Pawn("H7", ChessPiece.Color.BLACK));
+    }
+
     public boolean praznoPolje(String s) {
         int i = 0;
 
@@ -16,14 +52,35 @@ public class Board {
         return true;
     }
 
-    public boolean preskaceFigure(String s){
+    public boolean preskaceFigure(String pocetnaPozicija, String krajnjaPozicija){
         int i=0;
 
-    //    for (i = 0; i < spisak_figura.size(); i++){
+        int pX = pocetnaPozicija.charAt(0)-'A';
+        int pY =  pocetnaPozicija.charAt(1)-'1';
+        int kX = krajnjaPozicija.charAt(0)-'A';
+        int kY =  krajnjaPozicija.charAt(1)-'1';
+        int dX = kX - pX;
+        int dY = kY - pY;
+        int incX = 0, incY = 0;
+        if (dX > 0)
+            incX = 1;
+        else if (dX < 0)
+            incX = -1;
 
+        if (dY > 0)
+            incY = 1;
+        else if(dY < 0)
+            incY = -1;
 
-    //    }
-
+        while (pX != kX && pY != kY){
+            pX += incX;
+            pY += incY;
+            String temp = "A1";
+            char[] t = temp.toCharArray(); t[0]= 'A'; t[1]= '1';
+            String trenutnaPozicija = String.valueOf(t);
+            if (!praznoPolje(trenutnaPozicija))
+                return true;
+        }
         return false;
     }
 
@@ -88,6 +145,7 @@ public class Board {
         ind2 = indeksTrazeneFigureUListi(e);
 
         if(!praznoPolje(e2)) throw new IllegalArgumentException ("Greška!");
+        if(preskaceFigure(e2,e)) throw new IllegalChessMoveException("Preskače figure");
 
         for (i=0; i < spisak_figura.size();  i++){
             if(!praznoPolje(e)){
