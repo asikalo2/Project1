@@ -1,5 +1,6 @@
 package ba.unsa.etf.rpr;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -44,6 +45,24 @@ public class Board {
         spisak_figura.add(new Pawn("F7", ChessPiece.Color.BLACK));
         spisak_figura.add(new Pawn("G7", ChessPiece.Color.BLACK));
         spisak_figura.add(new Pawn("H7", ChessPiece.Color.BLACK));
+    }
+
+
+    public ChessPiece.Color provjeri_boju (String pozicija){
+        int i=0;
+       //ChessPiece.Color boja = WHITE;
+
+        for (i=0; i < spisak_figura.size(); i++){
+            if(spisak_figura.get(i).getPosition().equals(pozicija))
+                return spisak_figura.get(i).getColor();
+        }
+    return null;
+    }
+
+    public boolean vrati_boju(ChessPiece.Color c1, ChessPiece.Color c2){
+        if(c1.equals(c2)) return true;
+
+        return false;
     }
 
     public boolean praznoPolje(String s) {
@@ -214,17 +233,32 @@ public class Board {
     }
 
 
-    public void move(Class Chesspiece, ChessPiece.Color white, String e4) {
+    /*void move(Class type, ChessPiece.Color color, String position) pomjera figuru koja pripada klasi type,
+    boje color, na poziciju datu stringom position. Ova metoda treba najprije pronaći figuru tipa type date
+    boje među aktivnim figurama. Zatim treba pozvati njenu metodu move da provjeri da li je poziv legalan.
+    Pošto može biti više figura iste boje i tipa, treba pronaći prvu za koju je potez legalan i povući potez.
+    U slučaju da ne postoji niti jedna figura za koju je potez legalan treba baciti IllegalChessMoveException.
+    Konačno treba provjeriti da li se na odredišnoj poziciji već nalazi figura. Ako se nalazi figura druge boje,
+    ona je "pojedena" i treba je izbaciti, a ako se nalazi figura iste boje treba baciti IllegalChessMoveException.
+    Također treba voditi računa da kraljica, lovac, top i pijuni ne mogu preskakati druge figure.*/
+
+
+    public void move(Class type, ChessPiece.Color color, String e4) {
         int i=0;
+        int indeks = 0;
+        indeks = indeksTrazeneFigureUListi(e4);
 
         for (i=0; i < spisak_figura.size();  i++){
-            if(spisak_figura.get(i).equals(Chesspiece)){
-                spisak_figura.get(i).move(e4);
-                //   if(legalanPoziv(spisak_figura.get(i))) throw new IllegalChessMoveException ("Greška!");
-
+            if(spisak_figura.get(i).getClass().equals(type) && spisak_figura.get(i).getColor().equals(color)) {
+                if (praznoPolje(e4)) spisak_figura.get(i).move(e4);
+                else if (!praznoPolje(e4) && !vrati_boju(provjeri_boju(e4),color)) {
+                    spisak_figura.remove(indeks); //brisemo figuru iz liste jer je pojedena
+                    spisak_figura.get(i).move(e4);
+                }
+                else if(!praznoPolje(e4) && !vrati_boju(provjeri_boju(e4),color))
+                    throw new IllegalChessMoveException("Greska!");
             }
         }
-
     }
 
     public void move(String e2, String e) {
@@ -234,17 +268,13 @@ public class Board {
         ind1 = indeksTrazeneFigureUListi(e2);
         ind2 = indeksTrazeneFigureUListi(e);
 
-        if (spisak_figura.get(ind1).getClass().equals(Pawn.class)) {
-        }
-
         if(!praznoPolje(e2)) throw new IllegalArgumentException ("Greška!");
-        if(preskaceFigure(e2,e))
-            throw new IllegalChessMoveException("Preskače figure");
+        if(preskaceFigure(e2,e)) throw new IllegalChessMoveException("Preskače figure");
 
         for (i=0; i < spisak_figura.size();  i++){
-            if(!praznoPolje(e)){
-                spisak_figura.get(ind1).move(e2); //pomjeramo figuru na novo mjesto
+            if(!praznoPolje(e) && !vrati_boju(provjeri_boju(e2),provjeri_boju(e))){
                 spisak_figura.remove(ind2);// jede se figura koja je bila na starom mjestu
+                spisak_figura.get(ind1).move(e2); //pomjeramo figuru na novo mjesto
             }
            else {
                spisak_figura.get(ind1).move(e2);

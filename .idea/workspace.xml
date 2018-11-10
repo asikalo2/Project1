@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="992aba34-5bb5-4ebc-a76c-cedfa98b0117" name="Default Changelist" comment="ispravljanje klase Board, dodavanje novih metoda">
+    <list default="true" id="992aba34-5bb5-4ebc-a76c-cedfa98b0117" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/rpr-zadaca1/ba/unsa/etf/rpr/Board.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Board.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -33,14 +32,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="6969" />
-          <entry key="txt" value="579" />
+          <entry key="java" value="7903" />
+          <entry key="txt" value="595" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="6969" />
-          <entry key="PLAIN_TEXT" value="579" />
+          <entry key="JAVA" value="7903" />
+          <entry key="PLAIN_TEXT" value="595" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -62,8 +61,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="752">
-              <caret line="121" column="43" lean-forward="true" selection-start-line="121" selection-start-column="43" selection-end-line="121" selection-end-column="43" />
+            <state relative-caret-position="72">
+              <caret line="252" column="67" lean-forward="true" selection-start-line="252" selection-start-column="67" selection-end-line="252" selection-end-column="67" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -223,7 +222,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541850222651" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541854795260" />
     <property name="last_opened_file_path" value="$USER_HOME$/Documents" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -361,7 +360,7 @@
       <workItem from="1541626452629" duration="2577000" />
       <workItem from="1541711694395" duration="539000" />
       <workItem from="1541773651221" duration="793000" />
-      <workItem from="1541836799682" duration="6723000" />
+      <workItem from="1541836799682" duration="10789000" />
     </task>
     <task id="LOCAL-00001" summary="Added classes for all the chess pieces.">
       <created>1541262237661</created>
@@ -461,16 +460,17 @@
       <option name="project" value="LOCAL" />
       <updated>1541628922642</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="ispravljanje funkcije isCheck">
+      <created>1541850261339</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1541850261339</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BoardTest - 2018.11.09 at 15h 29m 32s.xml">
-      <configuration name="BoardTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BoardTest_pawnDiagonal1 - 2018.11.09 at 15h 37m 26s.xml">
-      <configuration name="BoardTest.pawnDiagonal1" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="BoardTest_pawnDiagonal1 - 2018.11.09 at 15h 39m 21s.xml">
       <configuration name="BoardTest.pawnDiagonal1" configurationId="JUnit" />
     </history-entry>
@@ -495,9 +495,15 @@
     <history-entry file="BoardTest - 2018.11.10 at 11h 23m 32s.xml">
       <configuration name="BoardTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="BoardTest - 2018.11.10 at 13h 52m 41s.xml">
+      <configuration name="BoardTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BoardTest - 2018.11.10 at 13h 56m 07s.xml">
+      <configuration name="BoardTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32873000" />
+    <option name="totallyTimeSpent" value="36939000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
@@ -584,7 +590,8 @@
     <MESSAGE value="Ispravljanje metode ispravnostPozicije" />
     <MESSAGE value="ispravljanje metode Board" />
     <MESSAGE value="ispravljanje klase Board, dodavanje novih metoda" />
-    <option name="LAST_COMMIT_MESSAGE" value="ispravljanje klase Board, dodavanje novih metoda" />
+    <MESSAGE value="ispravljanje funkcije isCheck" />
+    <option name="LAST_COMMIT_MESSAGE" value="ispravljanje funkcije isCheck" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -722,8 +729,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="752">
-          <caret line="121" column="43" lean-forward="true" selection-start-line="121" selection-start-column="43" selection-end-line="121" selection-end-column="43" />
+        <state relative-caret-position="72">
+          <caret line="252" column="67" lean-forward="true" selection-start-line="252" selection-start-column="67" selection-end-line="252" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
