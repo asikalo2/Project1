@@ -134,13 +134,17 @@ public class Board {
 
         if (boja.equals(ChessPiece.Color.WHITE)) {
             for (int i = 0; i < spisak_figura.size(); i++) {
-                if (napadaKralja(spisak_figura.get(i), ChessPiece.Color.BLACK))
+                if (napadaKralja(spisak_figura.get(i), ChessPiece.Color.BLACK)) {
+                    System.out.println("CHECK!!!");
                     return true;
+                }
             }
         } else {
             for (int i = 0; i < spisak_figura.size(); i++) {
-                if (napadaKralja(spisak_figura.get(i), ChessPiece.Color.WHITE))
+                if (napadaKralja(spisak_figura.get(i), ChessPiece.Color.WHITE)) {
+                    System.out.println("CHECK!!!");
                     return true;
+                }
             }
         }
         return false;
