@@ -3,6 +3,9 @@ package ba.unsa.etf.rpr;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.awt.Color.BLACK;
+import static java.awt.Color.WHITE;
+
 public class Board {
 
     private List<ChessPiece> spisak_figura = new ArrayList<ChessPiece>();
@@ -53,7 +56,7 @@ public class Board {
     }
 
     public boolean preskaceFigure(String pocetnaPozicija, String krajnjaPozicija){
-        int i=0;
+       int i=0;
 
         int pX = pocetnaPozicija.charAt(0)-'A';
         int pY =  pocetnaPozicija.charAt(1)-'1';
@@ -89,7 +92,7 @@ public class Board {
         int i=0;
 
         for (i=0; i < spisak_figura.size();  i++){
-            if(spisak_figura.get(i).equals(e)) {
+            if(spisak_figura.get(i).getPosition().equals(e)) {
                 indeks = i;
             }
         }
@@ -109,15 +112,102 @@ public class Board {
     public boolean isCheck(ChessPiece.Color boja) {
         int i=0;
 
-        if(boja.equals(ChessPiece.Color.WHITE)){
-            for (i=0; i < spisak_figura.size();  i++) {
-                if (spisak_figura.get(i).equals(boja)) return true;
+        //postvaljamo prazne stringove za lokaciju pozicije
+        String pozicijakralja = "";
+        String pozicijakraljice = "";
+        String pozicijapijuna = "";
+        String pozicijakonja = "";
+        String pozicijalovca = "";
+        String pozicijatopa = "";
+        String pozicijatrazenogkralja = "";
+
+
+        if(boja.equals(WHITE)) {        //provjeravamo da li je tražena boja bijela
+            //ako je tražena boja bijela prvo pronađemo bijelog kralja i zapisemo njegovu poziciju
+
+            for (i = 0; i < spisak_figura.size(); i++) { // prolazimo kroz spisak figra
+
+                if (spisak_figura.get(i).getClass().equals(King.class) && spisak_figura.get(i).getColor().equals(WHITE))
+                    pozicijatrazenogkralja = spisak_figura.get(i).getPosition(); //trazimo bijelog kralja i zapisujemo poziciju
+            }
+
+            for (i = 0; i < spisak_figura.size(); i++) { // prolazimo kroz spisak figra da
+                //pronadjemo sve lokacije crnih figura i odmah poredimo ako zadovoljena fja
+                //preskakanja, to znači da se bijeli kralj nalazi na putanji te figure,
+                //što znači da je šah!
+
+                if (spisak_figura.get(i).getClass().equals(Queen.class) && spisak_figura.get(i).getColor().equals(BLACK)) {
+                    pozicijakraljice = spisak_figura.get(i).getPosition();
+                    if(preskaceFigure(pozicijakraljice,pozicijatrazenogkralja)) return true;
+                }
+
+                if (spisak_figura.get(i).getClass().equals(Rook.class) && spisak_figura.get(i).getColor().equals(BLACK)){
+                    pozicijatopa = spisak_figura.get(i).getPosition();
+                    if(preskaceFigure(pozicijalovca,pozicijatrazenogkralja)) return true;
+                }
+
+                if (spisak_figura.get(i).getClass().equals(Bishop.class) && spisak_figura.get(i).getColor().equals(BLACK)) {
+                    pozicijalovca = spisak_figura.get(i).getPosition();
+                    if (preskaceFigure(pozicijatopa, pozicijatrazenogkralja)) return true;
+                }
+
+                if (spisak_figura.get(i).getClass().equals(Knight.class) && spisak_figura.get(i).getColor().equals(BLACK)) {
+                    pozicijakonja = spisak_figura.get(i).getPosition();
+                    if (preskaceFigure(pozicijakonja, pozicijatrazenogkralja)) return true;
+                }
+
+                if (spisak_figura.get(i).getClass().equals(Pawn.class) && spisak_figura.get(i).getColor().equals(BLACK)) {
+                    pozicijapijuna = spisak_figura.get(i).getPosition();
+                    if (preskaceFigure(pozicijapijuna, pozicijatrazenogkralja)) return true;
+                }
+
+                if (spisak_figura.get(i).getClass().equals(King.class) && spisak_figura.get(i).getColor().equals(BLACK)){
+                    pozicijakralja = spisak_figura.get(i).getPosition();
+                if(preskaceFigure(pozicijakralja,pozicijatrazenogkralja)) return true;
+                }
             }
         }
 
-        else if (boja.equals(ChessPiece.Color.WHITE)){
-            for (i=0; i < spisak_figura.size();  i++) {
-                if (spisak_figura.get(i).equals(boja)) return true;
+        //analogan postupak ide i za crnog kralja i bijele figure
+        else if(boja.equals(BLACK)) {
+
+            for (i = 0; i < spisak_figura.size(); i++) {
+
+                if (spisak_figura.get(i).getClass().equals(King.class) && spisak_figura.get(i).getColor().equals(BLACK))
+                    pozicijatrazenogkralja = spisak_figura.get(i).getPosition();
+            }
+
+            for (i = 0; i < spisak_figura.size(); i++) { // prolazimo kroz spisak figra
+
+                if (spisak_figura.get(i).getClass().equals(Queen.class) && spisak_figura.get(i).getColor().equals(WHITE)) {
+                    pozicijakraljice = spisak_figura.get(i).getPosition();
+                    if (preskaceFigure(pozicijakraljice, pozicijatrazenogkralja)) return true;
+                }
+
+                if (spisak_figura.get(i).getClass().equals(Rook.class) && spisak_figura.get(i).getColor().equals(WHITE)) {
+                    pozicijatopa = spisak_figura.get(i).getPosition();
+                    if (preskaceFigure(pozicijatopa, pozicijatrazenogkralja)) return true;
+                }
+
+                if (spisak_figura.get(i).getClass().equals(Bishop.class) && spisak_figura.get(i).getColor().equals(WHITE)) {
+                    pozicijalovca = spisak_figura.get(i).getPosition();
+                    if (preskaceFigure(pozicijalovca, pozicijatrazenogkralja)) return true;
+                }
+
+                if (spisak_figura.get(i).getClass().equals(Knight.class) && spisak_figura.get(i).getColor().equals(WHITE)) {
+                    pozicijakonja = spisak_figura.get(i).getPosition();
+                    if (preskaceFigure(pozicijakonja, pozicijatrazenogkralja)) return true;
+                }
+
+                if (spisak_figura.get(i).getClass().equals(Pawn.class) && spisak_figura.get(i).getColor().equals(WHITE)) {
+                    pozicijapijuna = spisak_figura.get(i).getPosition();
+                    if (preskaceFigure(pozicijapijuna, pozicijatrazenogkralja)) return true;
+                }
+
+                if (spisak_figura.get(i).getClass().equals(King.class) && spisak_figura.get(i).getColor().equals(WHITE)) {
+                    pozicijakralja = spisak_figura.get(i).getPosition();
+                    if (preskaceFigure(pozicijakralja, pozicijatrazenogkralja)) return true;
+                }
             }
         }
         return false;
@@ -144,8 +234,12 @@ public class Board {
         ind1 = indeksTrazeneFigureUListi(e2);
         ind2 = indeksTrazeneFigureUListi(e);
 
+        if (spisak_figura.get(ind1).getClass().equals(Pawn.class)) {
+        }
+
         if(!praznoPolje(e2)) throw new IllegalArgumentException ("Greška!");
-        if(preskaceFigure(e2,e)) throw new IllegalChessMoveException("Preskače figure");
+        if(preskaceFigure(e2,e))
+            throw new IllegalChessMoveException("Preskače figure");
 
         for (i=0; i < spisak_figura.size();  i++){
             if(!praznoPolje(e)){
