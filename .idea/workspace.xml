@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="992aba34-5bb5-4ebc-a76c-cedfa98b0117" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ba/unsa/etf/rpr/BishopTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/ba/unsa/etf/rpr/BishopTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ba/unsa/etf/rpr/QueenTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/ba/unsa/etf/rpr/QueenTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,26 +32,26 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="9764" />
-          <entry key="txt" value="939" />
+          <entry key="java" value="9814" />
+          <entry key="txt" value="951" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="9764" />
-          <entry key="PLAIN_TEXT" value="939" />
+          <entry key="JAVA" value="9814" />
+          <entry key="PLAIN_TEXT" value="951" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="9" />
-          <entry key="java" value="61" />
+          <entry key="java" value="62" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="9" />
-          <entry key="JAVA" value="61" />
+          <entry key="JAVA" value="62" />
         </counts>
       </usages-collector>
     </session>
@@ -106,6 +106,18 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/ba/unsa/etf/rpr/QueenTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-642">
+              <caret line="86" column="10" lean-forward="true" selection-start-line="86" selection-start-column="10" selection-end-line="86" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/ba/unsa/etf/rpr/KingTest.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -127,7 +139,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/ba/unsa/etf/rpr/BishopTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="140">
@@ -168,8 +180,8 @@
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Board.java" />
         <option value="$PROJECT_DIR$/test/ba/unsa/etf/rpr/BoardTest.java" />
         <option value="$PROJECT_DIR$/test/ba/unsa/etf/rpr/RookTest.java" />
-        <option value="$PROJECT_DIR$/test/ba/unsa/etf/rpr/QueenTest.java" />
         <option value="$PROJECT_DIR$/test/ba/unsa/etf/rpr/BishopTest.java" />
+        <option value="$PROJECT_DIR$/test/ba/unsa/etf/rpr/QueenTest.java" />
       </list>
     </option>
   </component>
@@ -232,7 +244,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541869627367" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541869916587" />
     <property name="last_opened_file_path" value="$USER_HOME$/Documents" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -373,7 +385,7 @@
       <workItem from="1541626452629" duration="2577000" />
       <workItem from="1541711694395" duration="539000" />
       <workItem from="1541773651221" duration="793000" />
-      <workItem from="1541836799682" duration="23021000" />
+      <workItem from="1541836799682" duration="23309000" />
     </task>
     <task id="LOCAL-00001" summary="Added classes for all the chess pieces.">
       <created>1541262237661</created>
@@ -515,13 +527,17 @@
       <option name="project" value="LOCAL" />
       <updated>1541869380983</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="ispravljanje testova za klasu Bishop">
+      <created>1541869647171</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1541869647171</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="[engine_junit-jupiter]_[class_ba_unsa_etf_rpr_QueenTest] - 2018.11.10 at 17h 51m 55s.xml">
-      <configuration name="[engine:junit-jupiter]/[class:ba.unsa.etf.rpr.QueenTest]" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="[engine_junit-jupiter]_[class_ba_unsa_etf_rpr_QueenTest] - 2018.11.10 at 17h 52m 15s.xml">
       <configuration name="[engine:junit-jupiter]/[class:ba.unsa.etf.rpr.QueenTest]" configurationId="JUnit" />
     </history-entry>
@@ -549,15 +565,18 @@
     <history-entry file="BishopTest - 2018.11.10 at 18h 06m 17s.xml">
       <configuration name="BishopTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="BishopTest - 2018.11.10 at 18h 07m 10s.xml">
+      <configuration name="BishopTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49171000" />
+    <option name="totallyTimeSpent" value="49459000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14589666" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14589666" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -566,7 +585,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295082" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924013" visible="true" weight="0.3295082" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924013" visible="true" weight="0.3295082" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -644,7 +663,8 @@
     <MESSAGE value="kreiranje testova za svaku klasu za koju nije bilo napravljeno,&#10;te podesavanje testa za klasu Queen." />
     <MESSAGE value="dodavanje testova za klasu Queen" />
     <MESSAGE value="dodavanje testova za klasu Bishop" />
-    <option name="LAST_COMMIT_MESSAGE" value="dodavanje testova za klasu Bishop" />
+    <MESSAGE value="ispravljanje testova za klasu Bishop" />
+    <option name="LAST_COMMIT_MESSAGE" value="ispravljanje testova za klasu Bishop" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -876,13 +896,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/ba/unsa/etf/rpr/BoardTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-254">
-          <caret line="135" column="17" lean-forward="true" selection-start-line="135" selection-start-column="17" selection-end-line="135" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Rook.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
@@ -906,6 +919,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/ba/unsa/etf/rpr/BishopTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="84" column="10" selection-start-line="84" selection-start-column="10" selection-end-line="84" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/ba/unsa/etf/rpr/RookTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="327">
@@ -923,20 +946,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/ba/unsa/etf/rpr/QueenTest.java">
+    <entry file="file://$PROJECT_DIR$/test/ba/unsa/etf/rpr/BoardTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="38" column="10" lean-forward="true" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="-254">
+          <caret line="135" column="17" lean-forward="true" selection-start-line="135" selection-start-column="17" selection-end-line="135" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/ba/unsa/etf/rpr/BishopTest.java">
+    <entry file="file://$PROJECT_DIR$/test/ba/unsa/etf/rpr/QueenTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="84" column="10" selection-start-line="84" selection-start-column="10" selection-end-line="84" selection-end-column="10" />
+        <state relative-caret-position="-642">
+          <caret line="86" column="10" lean-forward="true" selection-start-line="86" selection-start-column="10" selection-end-line="86" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

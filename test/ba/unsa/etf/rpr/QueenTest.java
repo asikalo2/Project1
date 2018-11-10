@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 public class QueenTest {
 
     @org.junit.jupiter.api.Test
-    void moveDiagonal() {
+    void moveRight() {
         Queen k = new Queen("D1", ChessPiece.Color.WHITE);
         assertDoesNotThrow(
                 () -> k.move("H1")
@@ -16,23 +16,39 @@ public class QueenTest {
     }
 
     @org.junit.jupiter.api.Test
-    void moveDiagonal2() {
-        Queen k = new Queen("D1", ChessPiece.Color.WHITE);
+    void moveLeft() {
+        Queen k = new Queen("H1", ChessPiece.Color.WHITE);
         assertDoesNotThrow(
                 () -> k.move("A1")
         );
     }
 
     @org.junit.jupiter.api.Test
+    void moveDiagonal1() {
+        Queen k = new Queen("D1", ChessPiece.Color.WHITE);
+        assertDoesNotThrow(
+                () -> k.move("A4")
+        );
+    }
+
+    @org.junit.jupiter.api.Test
+    void moveDiagonal12() {
+        Queen k = new Queen("D1", ChessPiece.Color.WHITE);
+        assertDoesNotThrow(
+                () -> k.move("H5")
+        );
+    }
+
+    @org.junit.jupiter.api.Test
     void moveDiagonal3() {
-        Queen k = new Queen("D8", ChessPiece.Color.WHITE);
+        Queen k = new Queen("D8", ChessPiece.Color.BLACK);
         assertDoesNotThrow(
                 () -> k.move("A5")
         );
     }
 
     @org.junit.jupiter.api.Test
-    void moveDiagonal4() {
+    void moveDiagonal32() {
         Queen k = new Queen("D8", ChessPiece.Color.WHITE);
         assertDoesNotThrow(
                 () -> k.move("H4")
