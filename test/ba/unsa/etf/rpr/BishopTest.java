@@ -7,81 +7,81 @@ public class BishopTest {
 
     @org.junit.jupiter.api.Test
     void moveDiagonal1() {
-        Queen k = new Queen("F1", ChessPiece.Color.WHITE);
+        Bishop b = new Bishop("F1", ChessPiece.Color.WHITE);
         assertDoesNotThrow(
-                () -> k.move("A6")
+                () -> b.move("A6")
         );
     }
 
     @org.junit.jupiter.api.Test
     void moveDiagonal12() {
-        Queen k = new Queen("C1", ChessPiece.Color.WHITE);
+        Bishop b = new Bishop("C1", ChessPiece.Color.WHITE);
         assertDoesNotThrow(
-                () -> k.move("A3")
+                () -> b.move("A3")
         );
     }
 
     @org.junit.jupiter.api.Test
     void moveDiagonal2() {
-        Queen k = new Queen("C1", ChessPiece.Color.WHITE);
+        Bishop b = new Bishop("C1", ChessPiece.Color.WHITE);
         assertDoesNotThrow(
-                () -> k.move("H6")
+                () -> b.move("H6")
         );
     }
 
     @org.junit.jupiter.api.Test
     void moveDiagonal22() {
-        Queen k = new Queen("F1", ChessPiece.Color.WHITE);
+        Bishop b = new Bishop("F1", ChessPiece.Color.WHITE);
         assertDoesNotThrow(
-                () -> k.move("H3")
+                () -> b.move("H3")
         );
     }
 
     @org.junit.jupiter.api.Test
     void moveDiagonal3() {
-        Queen k = new Queen("F8", ChessPiece.Color.WHITE);
+        Bishop b = new Bishop("F8", ChessPiece.Color.WHITE);
         assertDoesNotThrow(
-                () -> k.move("A3")
+                () -> b.move("A3")
         );
     }
 
     @org.junit.jupiter.api.Test
     void moveDiagonal32() {
-        Queen k = new Queen("C8", ChessPiece.Color.WHITE);
+        Bishop b = new Bishop("C8", ChessPiece.Color.WHITE);
         assertDoesNotThrow(
-                () -> k.move("A6")
+                () -> b.move("A6")
         );
     }
 
     @org.junit.jupiter.api.Test
     void moveDiagonal4() {
-        Queen k = new Queen("C8", ChessPiece.Color.WHITE);
+        Bishop b = new Bishop("C8", ChessPiece.Color.WHITE);
         assertDoesNotThrow(
-                () -> k.move("H3")
+                () -> b.move("H3")
         );
     }
 
     @org.junit.jupiter.api.Test
     void moveDiagonal42() {
-        Queen k = new Queen("F8", ChessPiece.Color.WHITE);
+        Bishop b = new Bishop("F8", ChessPiece.Color.WHITE);
         assertDoesNotThrow(
-                () -> k.move("H6")
+                () -> b.move("H6")
         );
     }
 
     @org.junit.jupiter.api.Test
     void moveTwo() {
-        King k = new King("C2", ChessPiece.Color.BLACK);
+        Bishop b = new Bishop("C2", ChessPiece.Color.BLACK);
         assertThrows( IllegalChessMoveException.class,
-                () -> k.move("E2")
+                () -> b.move("E2")
         );
     }
 
     @org.junit.jupiter.api.Test
     void moveBack() {
-        King k = new King("E3", ChessPiece.Color.WHITE);
-        assertDoesNotThrow(
-                () -> k.move("E2")
+        Bishop b = new Bishop("E3", ChessPiece.Color.WHITE);
+        assertThrows( IllegalChessMoveException.class,
+                () -> b.move("E2")
         );
     }
 
@@ -89,7 +89,7 @@ public class BishopTest {
     void constructor1() {
         assertThrows(
                 IllegalArgumentException.class,
-                () -> new King("I2", ChessPiece.Color.WHITE)
+                () -> new Bishop("I2", ChessPiece.Color.WHITE)
         );
     }
 
@@ -105,34 +105,34 @@ public class BishopTest {
     void constructor3() {
         assertThrows(
                 IllegalArgumentException.class,
-                () -> new King("", ChessPiece.Color.WHITE)
+                () -> new Bishop("", ChessPiece.Color.WHITE)
         );
     }
 
     @org.junit.jupiter.api.Test
     void moveIllegal1() {
-        King k = new King("C1", ChessPiece.Color.BLACK);
+        Bishop b = new Bishop("C1", ChessPiece.Color.BLACK);
         assertThrows(
                 IllegalArgumentException.class,
-                () -> k.move("C0")
+                () -> b.move("C0")
         );
     }
 
     @org.junit.jupiter.api.Test
     void moveIllegal2() {
-        King k = new King("H1", ChessPiece.Color.BLACK);
+        Bishop b = new Bishop("H1", ChessPiece.Color.BLACK);
         assertThrows(
                 IllegalArgumentException.class,
-                () -> k.move("I1")
+                () -> b.move("I1")
         );
     }
 
     @org.junit.jupiter.api.Test
     void moveIllegal3() {
-        King k = new King("C1", ChessPiece.Color.BLACK);
+        Bishop b = new Bishop("C1", ChessPiece.Color.BLACK);
         assertThrows(
                 IllegalArgumentException.class,
-                () -> k.move("")
+                () -> b.move("")
         );
     }
 }

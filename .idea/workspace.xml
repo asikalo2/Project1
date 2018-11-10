@@ -32,14 +32,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="9506" />
-          <entry key="txt" value="931" />
+          <entry key="java" value="9764" />
+          <entry key="txt" value="939" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="9506" />
-          <entry key="PLAIN_TEXT" value="931" />
+          <entry key="JAVA" value="9764" />
+          <entry key="PLAIN_TEXT" value="939" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -130,8 +130,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/ba/unsa/etf/rpr/BishopTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+            <state relative-caret-position="140">
+              <caret line="84" column="10" selection-start-line="84" selection-start-column="10" selection-end-line="84" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -232,7 +232,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541869356606" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541869627367" />
     <property name="last_opened_file_path" value="$USER_HOME$/Documents" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -373,7 +373,7 @@
       <workItem from="1541626452629" duration="2577000" />
       <workItem from="1541711694395" duration="539000" />
       <workItem from="1541773651221" duration="793000" />
-      <workItem from="1541836799682" duration="22734000" />
+      <workItem from="1541836799682" duration="23021000" />
     </task>
     <task id="LOCAL-00001" summary="Added classes for all the chess pieces.">
       <created>1541262237661</created>
@@ -508,16 +508,17 @@
       <option name="project" value="LOCAL" />
       <updated>1541868938332</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="dodavanje testova za klasu Bishop">
+      <created>1541869380983</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1541869380983</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="[engine_junit-jupiter]_[class_ba_unsa_etf_rpr_QueenTest] - 2018.11.10 at 17h 50m 13s.xml">
-      <configuration name="[engine:junit-jupiter]/[class:ba.unsa.etf.rpr.QueenTest]" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="[engine_junit-jupiter]_[class_ba_unsa_etf_rpr_QueenTest] - 2018.11.10 at 17h 51m 43s.xml">
-      <configuration name="[engine:junit-jupiter]/[class:ba.unsa.etf.rpr.QueenTest]" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="[engine_junit-jupiter]_[class_ba_unsa_etf_rpr_QueenTest] - 2018.11.10 at 17h 51m 55s.xml">
       <configuration name="[engine:junit-jupiter]/[class:ba.unsa.etf.rpr.QueenTest]" configurationId="JUnit" />
     </history-entry>
@@ -542,9 +543,15 @@
     <history-entry file="BishopTest - 2018.11.10 at 17h 58m 38s.xml">
       <configuration name="BishopTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="BishopTest - 2018.11.10 at 18h 02m 39s.xml">
+      <configuration name="BishopTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BishopTest - 2018.11.10 at 18h 06m 17s.xml">
+      <configuration name="BishopTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48884000" />
+    <option name="totallyTimeSpent" value="49171000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
@@ -559,7 +566,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295082" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924013" weight="0.3295082" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924013" visible="true" weight="0.3295082" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -568,7 +575,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007599" side_tool="true" weight="0.3295082" />
-      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.3295082" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3295082" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -636,7 +643,8 @@
     <MESSAGE value="ispravljanje funkcija koje su bile pogrešne unutar klase Board, ili onih koje su se mogle kraće napisati, te manja ispravljanja unutar klasa gdje su figure, koje se tiču funkcije move" />
     <MESSAGE value="kreiranje testova za svaku klasu za koju nije bilo napravljeno,&#10;te podesavanje testa za klasu Queen." />
     <MESSAGE value="dodavanje testova za klasu Queen" />
-    <option name="LAST_COMMIT_MESSAGE" value="dodavanje testova za klasu Queen" />
+    <MESSAGE value="dodavanje testova za klasu Bishop" />
+    <option name="LAST_COMMIT_MESSAGE" value="dodavanje testova za klasu Bishop" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -927,8 +935,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/ba/unsa/etf/rpr/BishopTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        <state relative-caret-position="140">
+          <caret line="84" column="10" selection-start-line="84" selection-start-column="10" selection-end-line="84" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
