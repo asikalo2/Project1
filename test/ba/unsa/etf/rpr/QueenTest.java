@@ -11,21 +11,61 @@ public class QueenTest {
     void moveDiagonal() {
         Queen k = new Queen("D1", ChessPiece.Color.WHITE);
         assertDoesNotThrow(
-                () -> k.move("E1")
+                () -> k.move("H1")
         );
     }
 
     @org.junit.jupiter.api.Test
-    void moveTwo() {
+    void moveDiagonal2() {
+        Queen k = new Queen("D1", ChessPiece.Color.WHITE);
+        assertDoesNotThrow(
+                () -> k.move("A1")
+        );
+    }
+
+    @org.junit.jupiter.api.Test
+    void moveDiagonal3() {
+        Queen k = new Queen("D8", ChessPiece.Color.WHITE);
+        assertDoesNotThrow(
+                () -> k.move("A5")
+        );
+    }
+
+    @org.junit.jupiter.api.Test
+    void moveDiagonal4() {
+        Queen k = new Queen("D8", ChessPiece.Color.WHITE);
+        assertDoesNotThrow(
+                () -> k.move("H4")
+        );
+    }
+
+    @org.junit.jupiter.api.Test
+    void moveForward() {
+        Queen k = new Queen("D1", ChessPiece.Color.WHITE);
+        assertDoesNotThrow(
+                () -> k.move("D7")
+        );
+    }
+
+    @org.junit.jupiter.api.Test
+    void moveIlegal() {
         Queen k = new Queen("C2", ChessPiece.Color.BLACK);
         assertThrows( IllegalChessMoveException.class,
-                () -> k.move("E2")
+                () -> k.move("E3")
+        );
+    }
+
+    @org.junit.jupiter.api.Test
+    void moveForward2() {
+        Queen k = new Queen("C2", ChessPiece.Color.BLACK);
+        assertThrows( IllegalChessMoveException.class,
+                () -> k.move("E7")
         );
     }
 
     @org.junit.jupiter.api.Test
     void moveBack() {
-        Queen k = new Queen("E3", ChessPiece.Color.WHITE);
+        Queen k = new Queen("E6", ChessPiece.Color.WHITE);
         assertDoesNotThrow(
                 () -> k.move("E2")
         );
