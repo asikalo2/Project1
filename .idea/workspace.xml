@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="992aba34-5bb5-4ebc-a76c-cedfa98b0117" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/rpr-zadaca1/ba/unsa/etf/rpr/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/rpr-zadaca1/ba/unsa/etf/rpr/Board.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Board.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/ba/unsa/etf/rpr/BoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/ba/unsa/etf/rpr/BoardTest.java" afterDir="false" />
     </list>
@@ -35,14 +34,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="14976" />
-          <entry key="txt" value="1378" />
+          <entry key="java" value="15066" />
+          <entry key="txt" value="1507" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="14976" />
-          <entry key="PLAIN_TEXT" value="1378" />
+          <entry key="JAVA" value="15066" />
+          <entry key="PLAIN_TEXT" value="1507" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -61,11 +60,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="227" column="67" selection-start-line="227" selection-start-column="67" selection-end-line="227" selection-end-column="67" />
+            <state relative-caret-position="276">
+              <caret line="217" column="75" lean-forward="true" selection-start-line="217" selection-start-column="75" selection-end-line="217" selection-end-column="75" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -73,11 +72,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/ba/unsa/etf/rpr/BoardTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="84" selection-start-line="84" selection-end-line="86" selection-end-column="88" />
+            <state relative-caret-position="497">
+              <caret line="352" column="9" selection-start-line="352" selection-start-column="9" selection-end-line="352" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -114,8 +113,8 @@
         <option value="$PROJECT_DIR$/test/ba/unsa/etf/rpr/RookTest.java" />
         <option value="$PROJECT_DIR$/test/ba/unsa/etf/rpr/PawnTest.java" />
         <option value="$PROJECT_DIR$/test/ba/unsa/etf/rpr/KnightTest.java" />
-        <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Board.java" />
         <option value="$PROJECT_DIR$/test/ba/unsa/etf/rpr/BoardTest.java" />
+        <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Board.java" />
       </list>
     </option>
   </component>
@@ -178,7 +177,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541884026117" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541884838660" />
     <property name="last_opened_file_path" value="$USER_HOME$/Documents" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -327,7 +326,7 @@
       <workItem from="1541711694395" duration="539000" />
       <workItem from="1541773651221" duration="793000" />
       <workItem from="1541836799682" duration="30462000" />
-      <workItem from="1541878939467" duration="5175000" />
+      <workItem from="1541878939467" duration="5820000" />
     </task>
     <task id="LOCAL-00001" summary="Added classes for all the chess pieces.">
       <created>1541262237661</created>
@@ -539,19 +538,17 @@
       <option name="project" value="LOCAL" />
       <updated>1541883259138</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Test isCheck2, kod BoardTest, mislim da nije dobar. Test bi trebao prolaziti ukoliko je šah, tj. padati ako nije, a ovdje se to radi suprotno. Kada se ovi potezi povuku, trebao bi biti šah, a test pada ukoliko je šah. Stavljala sam i assertTrue(b.isCheck(ChessPiece.Color.BLACK)); i tada prolazi.">
+      <created>1541884245032</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1541884245032</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="[engine_junit-jupiter]_[class_ba_unsa_etf_rpr_BoardTest] - 2018.11.10 at 21h 53m 52s.xml">
-      <configuration name="[engine:junit-jupiter]/[class:ba.unsa.etf.rpr.BoardTest]" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="[engine_junit-jupiter]_[class_ba_unsa_etf_rpr_BoardTest] - 2018.11.10 at 21h 55m 49s.xml">
-      <configuration name="[engine:junit-jupiter]/[class:ba.unsa.etf.rpr.BoardTest]" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BoardTest_someLegalMoves - 2018.11.10 at 21h 56m 05s.xml">
-      <configuration name="BoardTest.someLegalMoves" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="BoardTest_someLegalMoves - 2018.11.10 at 21h 56m 13s.xml">
       <configuration name="BoardTest.someLegalMoves" configurationId="JUnit" />
     </history-entry>
@@ -573,9 +570,18 @@
     <history-entry file="[engine_junit-jupiter]_[class_ba_unsa_etf_rpr_BoardTest]_(1) - 2018.11.10 at 22h 07m 09s.xml">
       <configuration name="[engine:junit-jupiter]/[class:ba.unsa.etf.rpr.BoardTest] (1)" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="[engine_junit-jupiter]_[class_ba_unsa_etf_rpr_BoardTest]_(1) - 2018.11.10 at 22h 11m 06s.xml">
+      <configuration name="[engine:junit-jupiter]/[class:ba.unsa.etf.rpr.BoardTest] (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="[engine_junit-jupiter]_[class_ba_unsa_etf_rpr_BoardTest]_(1) - 2018.11.10 at 22h 16m 26s.xml">
+      <configuration name="[engine:junit-jupiter]/[class:ba.unsa.etf.rpr.BoardTest] (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="[engine_junit-jupiter]_[class_ba_unsa_etf_rpr_BoardTest]_(1) - 2018.11.10 at 22h 19m 02s.xml">
+      <configuration name="[engine:junit-jupiter]/[class:ba.unsa.etf.rpr.BoardTest] (1)" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61787000" />
+    <option name="totallyTimeSpent" value="62432000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
@@ -648,7 +654,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Stavljene metode iz testova za Board klasu. Kod se sada builda i napravio move za Pawn klasu tako da prolaze testovi." />
     <MESSAGE value="Ispravljanje izvedene klase King" />
     <MESSAGE value="Ispravljanje izvedene klase King - drugi put" />
     <MESSAGE value="Ispravljanje izvedene klase Bishop" />
@@ -673,7 +678,8 @@
     <MESSAGE value="Dodavanje testova u KnightTest i PawnTest." />
     <MESSAGE value="Dodavanje testova u KnightTest i PawnTest, drugi dio." />
     <MESSAGE value="Dodavanje testova u BoardTest." />
-    <option name="LAST_COMMIT_MESSAGE" value="Dodavanje testova u BoardTest." />
+    <MESSAGE value="Test isCheck2, kod BoardTest, mislim da nije dobar. Test bi trebao prolaziti ukoliko je šah, tj. padati ako nije, a ovdje se to radi suprotno. Kada se ovi potezi povuku, trebao bi biti šah, a test pada ukoliko je šah. Stavljala sam i assertTrue(b.isCheck(ChessPiece.Color.BLACK)); i tada prolazi." />
+    <option name="LAST_COMMIT_MESSAGE" value="Test isCheck2, kod BoardTest, mislim da nije dobar. Test bi trebao prolaziti ukoliko je šah, tj. padati ako nije, a ovdje se to radi suprotno. Kada se ovi potezi povuku, trebao bi biti šah, a test pada ukoliko je šah. Stavljala sam i assertTrue(b.isCheck(ChessPiece.Color.BLACK)); i tada prolazi." />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -913,20 +919,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Board.java">
+    <entry file="file://$PROJECT_DIR$/test/ba/unsa/etf/rpr/BoardTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="227" column="67" selection-start-line="227" selection-start-column="67" selection-end-line="227" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="497">
+          <caret line="352" column="9" selection-start-line="352" selection-start-column="9" selection-end-line="352" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/ba/unsa/etf/rpr/BoardTest.java">
+    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="84" selection-start-line="84" selection-end-line="86" selection-end-column="88" />
+        <state relative-caret-position="276">
+          <caret line="217" column="75" lean-forward="true" selection-start-line="217" selection-start-column="75" selection-end-line="217" selection-end-column="75" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

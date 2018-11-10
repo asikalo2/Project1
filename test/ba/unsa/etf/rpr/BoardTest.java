@@ -339,5 +339,17 @@ class BoardTest {
                 }
         );
     }
-
+    @Test
+        // Check by queen
+    void throwingException() {
+        Board b = new Board();
+        try {
+            b.move("E2", "E4");
+            b.move("D2", "D4");
+            b.move("E4", "E5");
+            b.move("D4", "E5");
+        } catch(Exception e) {
+            // Do nothing
+        }
+    }
 }

@@ -209,13 +209,12 @@ public class Board {
     public void move(String e2, String e) {
         //Metoda move vrši sve provjere kao i prva metoda move, samo što u ovom slučaju pomjera se figura sa pozicije
         //e2 na poziciju e.
-        int i = 0;
         int ind1 = 0;
         int ind2 = 0;
         ind1 = indeksTrazeneFigureUListi(e2);
         ind2 = indeksTrazeneFigureUListi(e);
 
-        /*if (!praznoPolje(e)) throw new IllegalArgumentException("Greška!");*/
+        if (praznoPolje(e2)) throw new IllegalArgumentException("Greška!");
         if (preskaceFigure(e2, e)) throw new IllegalChessMoveException("Preskače figure");
 
         if (!praznoPolje(e) && !vrati_boju(provjeri_boju(e2), provjeri_boju(e))) {
@@ -224,8 +223,8 @@ public class Board {
         } else if(praznoPolje(e)) {
             spisak_figura.get(ind1).move(e);
         }
-        else{
-            throw new IllegalChessMoveException("Preskače figure");
+        else if (!praznoPolje(e) && vrati_boju(provjeri_boju(e2), provjeri_boju(e))){
+            throw new IllegalChessMoveException("Na novoj poziciji je figura iste boje!");
         }
 
     }
