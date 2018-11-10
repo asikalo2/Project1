@@ -33,6 +33,8 @@ public class Rook extends ChessPiece {
 
     @Override
     public void move(String position) {
+        if (this.position.equals(position))
+            return;
         if (!ispravnostPozicije(position)) throw new IllegalArgumentException("Neispravna pozicija!");
         if(!provjeriPomak(position)) throw new IllegalChessMoveException ("Neispravan potez!");
         this.position=position;

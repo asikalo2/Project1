@@ -48,19 +48,19 @@ public class Board {
     }
 
 
-    public ChessPiece.Color provjeri_boju (String pozicija){
-        int i=0;
-       //ChessPiece.Color boja = WHITE;
+    public ChessPiece.Color provjeri_boju(String pozicija) {
+        int i = 0;
+        //ChessPiece.Color boja = WHITE;
 
-        for (i=0; i < spisak_figura.size(); i++){
-            if(spisak_figura.get(i).getPosition().equals(pozicija))
+        for (i = 0; i < spisak_figura.size(); i++) {
+            if (spisak_figura.get(i).getPosition().equals(pozicija))
                 return spisak_figura.get(i).getColor();
         }
-    return null;
+        return null;
     }
 
-    public boolean vrati_boju(ChessPiece.Color c1, ChessPiece.Color c2){
-        if(c1.equals(c2)) return true;
+    public boolean vrati_boju(ChessPiece.Color c1, ChessPiece.Color c2) {
+        if (c1.equals(c2)) return true;
 
         return false;
     }
@@ -69,18 +69,18 @@ public class Board {
         int i = 0;
 
         for (i = 0; i < spisak_figura.size(); i++) {
-            if (spisak_figura.get(i).equals(s)) return false;
+            if (spisak_figura.get(i).getPosition().equals(s)) return false;
         }
         return true;
     }
 
-    public boolean preskaceFigure(String pocetnaPozicija, String krajnjaPozicija){
-       int i=0;
+    public boolean preskaceFigure(String pocetnaPozicija, String krajnjaPozicija) {
+        int i = 0;
 
-        int pX = pocetnaPozicija.charAt(0)-'A';
-        int pY =  pocetnaPozicija.charAt(1)-'1';
-        int kX = krajnjaPozicija.charAt(0)-'A';
-        int kY =  krajnjaPozicija.charAt(1)-'1';
+        int pX = pocetnaPozicija.charAt(0) - 'A';
+        int pY = pocetnaPozicija.charAt(1) - '1';
+        int kX = krajnjaPozicija.charAt(0) - 'A';
+        int kY = krajnjaPozicija.charAt(1) - '1';
         int dX = kX - pX;
         int dY = kY - pY;
         int incX = 0, incY = 0;
@@ -91,14 +91,16 @@ public class Board {
 
         if (dY > 0)
             incY = 1;
-        else if(dY < 0)
+        else if (dY < 0)
             incY = -1;
 
-        while (pX != kX && pY != kY){
+        while (pX != kX-incX && pY != kY-incY) {
             pX += incX;
             pY += incY;
             String temp = "A1";
-            char[] t = temp.toCharArray(); t[0]= 'A'; t[1]= '1';
+            char[] t = temp.toCharArray();
+            t[0] = (char)('A'+pX);
+            t[1] = (char)('1'+pY);
             String trenutnaPozicija = String.valueOf(t);
             if (!praznoPolje(trenutnaPozicija))
                 return true;
@@ -106,12 +108,12 @@ public class Board {
         return false;
     }
 
-    public int indeksTrazeneFigureUListi(String e){
-        int indeks=0;
-        int i=0;
+    public int indeksTrazeneFigureUListi(String e) {
+        int indeks = 0;
+        int i = 0;
 
-        for (i=0; i < spisak_figura.size();  i++){
-            if(spisak_figura.get(i).getPosition().equals(e)) {
+        for (i = 0; i < spisak_figura.size(); i++) {
+            if (spisak_figura.get(i).getPosition().equals(e)) {
                 indeks = i;
             }
         }
@@ -129,107 +131,39 @@ public class Board {
     }
 
     public boolean isCheck(ChessPiece.Color boja) {
-        int i=0;
 
-        //postvaljamo prazne stringove za lokaciju pozicije
-        String pozicijakralja = "";
-        String pozicijakraljice = "";
-        String pozicijapijuna = "";
-        String pozicijakonja = "";
-        String pozicijalovca = "";
-        String pozicijatopa = "";
-        String pozicijatrazenogkralja = "";
-
-
-        if(boja.equals(WHITE)) {        //provjeravamo da li je tražena boja bijela
-            //ako je tražena boja bijela prvo pronađemo bijelog kralja i zapisemo njegovu poziciju
-
-            for (i = 0; i < spisak_figura.size(); i++) { // prolazimo kroz spisak figra
-
-                if (spisak_figura.get(i).getClass().equals(King.class) && spisak_figura.get(i).getColor().equals(WHITE))
-                    pozicijatrazenogkralja = spisak_figura.get(i).getPosition(); //trazimo bijelog kralja i zapisujemo poziciju
+        if (boja.equals(ChessPiece.Color.WHITE)) {
+            for (int i = 0; i < spisak_figura.size(); i++) {
+                if (napadaKralja(spisak_figura.get(i), ChessPiece.Color.BLACK))
+                    return true;
             }
-
-            for (i = 0; i < spisak_figura.size(); i++) { // prolazimo kroz spisak figra da
-                //pronadjemo sve lokacije crnih figura i odmah poredimo ako zadovoljena fja
-                //preskakanja, to znači da se bijeli kralj nalazi na putanji te figure,
-                //što znači da je šah!
-
-                if (spisak_figura.get(i).getClass().equals(Queen.class) && spisak_figura.get(i).getColor().equals(BLACK)) {
-                    pozicijakraljice = spisak_figura.get(i).getPosition();
-                    if(preskaceFigure(pozicijakraljice,pozicijatrazenogkralja)) return true;
-                }
-
-                if (spisak_figura.get(i).getClass().equals(Rook.class) && spisak_figura.get(i).getColor().equals(BLACK)){
-                    pozicijatopa = spisak_figura.get(i).getPosition();
-                    if(preskaceFigure(pozicijalovca,pozicijatrazenogkralja)) return true;
-                }
-
-                if (spisak_figura.get(i).getClass().equals(Bishop.class) && spisak_figura.get(i).getColor().equals(BLACK)) {
-                    pozicijalovca = spisak_figura.get(i).getPosition();
-                    if (preskaceFigure(pozicijatopa, pozicijatrazenogkralja)) return true;
-                }
-
-                if (spisak_figura.get(i).getClass().equals(Knight.class) && spisak_figura.get(i).getColor().equals(BLACK)) {
-                    pozicijakonja = spisak_figura.get(i).getPosition();
-                    if (preskaceFigure(pozicijakonja, pozicijatrazenogkralja)) return true;
-                }
-
-                if (spisak_figura.get(i).getClass().equals(Pawn.class) && spisak_figura.get(i).getColor().equals(BLACK)) {
-                    pozicijapijuna = spisak_figura.get(i).getPosition();
-                    if (preskaceFigure(pozicijapijuna, pozicijatrazenogkralja)) return true;
-                }
-
-                if (spisak_figura.get(i).getClass().equals(King.class) && spisak_figura.get(i).getColor().equals(BLACK)){
-                    pozicijakralja = spisak_figura.get(i).getPosition();
-                if(preskaceFigure(pozicijakralja,pozicijatrazenogkralja)) return true;
-                }
-            }
-        }
-
-        //analogan postupak ide i za crnog kralja i bijele figure
-        else if(boja.equals(BLACK)) {
-
-            for (i = 0; i < spisak_figura.size(); i++) {
-
-                if (spisak_figura.get(i).getClass().equals(King.class) && spisak_figura.get(i).getColor().equals(BLACK))
-                    pozicijatrazenogkralja = spisak_figura.get(i).getPosition();
-            }
-
-            for (i = 0; i < spisak_figura.size(); i++) { // prolazimo kroz spisak figra
-
-                if (spisak_figura.get(i).getClass().equals(Queen.class) && spisak_figura.get(i).getColor().equals(WHITE)) {
-                    pozicijakraljice = spisak_figura.get(i).getPosition();
-                    if (preskaceFigure(pozicijakraljice, pozicijatrazenogkralja)) return true;
-                }
-
-                if (spisak_figura.get(i).getClass().equals(Rook.class) && spisak_figura.get(i).getColor().equals(WHITE)) {
-                    pozicijatopa = spisak_figura.get(i).getPosition();
-                    if (preskaceFigure(pozicijatopa, pozicijatrazenogkralja)) return true;
-                }
-
-                if (spisak_figura.get(i).getClass().equals(Bishop.class) && spisak_figura.get(i).getColor().equals(WHITE)) {
-                    pozicijalovca = spisak_figura.get(i).getPosition();
-                    if (preskaceFigure(pozicijalovca, pozicijatrazenogkralja)) return true;
-                }
-
-                if (spisak_figura.get(i).getClass().equals(Knight.class) && spisak_figura.get(i).getColor().equals(WHITE)) {
-                    pozicijakonja = spisak_figura.get(i).getPosition();
-                    if (preskaceFigure(pozicijakonja, pozicijatrazenogkralja)) return true;
-                }
-
-                if (spisak_figura.get(i).getClass().equals(Pawn.class) && spisak_figura.get(i).getColor().equals(WHITE)) {
-                    pozicijapijuna = spisak_figura.get(i).getPosition();
-                    if (preskaceFigure(pozicijapijuna, pozicijatrazenogkralja)) return true;
-                }
-
-                if (spisak_figura.get(i).getClass().equals(King.class) && spisak_figura.get(i).getColor().equals(WHITE)) {
-                    pozicijakralja = spisak_figura.get(i).getPosition();
-                    if (preskaceFigure(pozicijakralja, pozicijatrazenogkralja)) return true;
-                }
+        } else {
+            for (int i = 0; i < spisak_figura.size(); i++) {
+                if (napadaKralja(spisak_figura.get(i), ChessPiece.Color.WHITE))
+                    return true;
             }
         }
         return false;
+    }
+
+    private boolean napadaKralja(ChessPiece chessPiece, ChessPiece.Color boja) {
+        String pozicijaKralja = dajPozicijuKralja(boja);
+        String trenutnaPozicija = chessPiece.getPosition();
+        try {
+            chessPiece.move(pozicijaKralja);
+            chessPiece.move(trenutnaPozicija);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    private String dajPozicijuKralja(ChessPiece.Color boja) {
+        for (int i = 0; i < spisak_figura.size(); i++) {
+            if (spisak_figura.get(i).getClass().equals(King.class) && spisak_figura.get(i).getColor().equals(boja))
+                return spisak_figura.get(i).getPosition();
+        }
+        return null;
     }
 
 
@@ -244,42 +178,37 @@ public class Board {
 
 
     public void move(Class type, ChessPiece.Color color, String e4) {
-        int i=0;
-        int indeks = 0;
-        indeks = indeksTrazeneFigureUListi(e4);
-
-        for (i=0; i < spisak_figura.size();  i++){
-            if(spisak_figura.get(i).getClass().equals(type) && spisak_figura.get(i).getColor().equals(color)) {
-                if (praznoPolje(e4)) spisak_figura.get(i).move(e4);
-                else if (!praznoPolje(e4) && !vrati_boju(provjeri_boju(e4),color)) {
-                    spisak_figura.remove(indeks); //brisemo figuru iz liste jer je pojedena
-                    spisak_figura.get(i).move(e4);
+        int i = 0;
+        boolean prosao = false;
+        for (i = 0; i < spisak_figura.size(); i++) {
+            if (spisak_figura.get(i).getClass().equals(type) && spisak_figura.get(i).getColor().equals(color)) {
+                try {
+                    move(spisak_figura.get(i).getPosition(), e4);
+                    return;
+                } catch (Exception e) {
+                    throw new IllegalChessMoveException(e.getMessage());
                 }
-                else if(!praznoPolje(e4) && !vrati_boju(provjeri_boju(e4),color))
-                    throw new IllegalChessMoveException("Greska!");
             }
         }
     }
 
     public void move(String e2, String e) {
-        int i=0;
+        int i = 0;
         int ind1 = 0;
         int ind2 = 0;
         ind1 = indeksTrazeneFigureUListi(e2);
         ind2 = indeksTrazeneFigureUListi(e);
 
-        if(!praznoPolje(e2)) throw new IllegalArgumentException ("Greška!");
-        if(preskaceFigure(e2,e)) throw new IllegalChessMoveException("Preskače figure");
+        /*if (!praznoPolje(e)) throw new IllegalArgumentException("Greška!");*/
+        if (preskaceFigure(e2, e)) throw new IllegalChessMoveException("Preskače figure");
 
-        for (i=0; i < spisak_figura.size();  i++){
-            if(!praznoPolje(e) && !vrati_boju(provjeri_boju(e2),provjeri_boju(e))){
-                spisak_figura.remove(ind2);// jede se figura koja je bila na starom mjestu
-                spisak_figura.get(ind1).move(e2); //pomjeramo figuru na novo mjesto
-            }
-           else {
-               spisak_figura.get(ind1).move(e2);
-           }
+        if (!praznoPolje(e) && !vrati_boju(provjeri_boju(e2), provjeri_boju(e))) {
+            spisak_figura.remove(ind2);// jede se figura koja je bila na starom mjestu
+            spisak_figura.get(ind1).move(e); //pomjeramo figuru na novo mjesto
+        } else {
+            spisak_figura.get(ind1).move(e);
         }
+
     }
 
 
