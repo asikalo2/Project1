@@ -81,14 +81,19 @@ class BoardTest {
     @Test
         // No check
     void isCheck2() {
+
+        /*Ja mislim da ste pogriješili ovaj test, jer bi trebao test prolaziti ukoliko je šah, tj. padati ako nije,
+        * a ovdje se to radi suprotno. Kada se ovi potezi povuku, trebao bi biti šah, a test pada ukoliko je šah.
+        * Stavljala sam assertTrue(b.isCheck(ChessPiece.Color.BLACK)); i tada prolazi.*/
+
         Board b = new Board();
         try {
             b.move(Pawn.class, ChessPiece.Color.WHITE, "E4");
             b.move(Pawn.class, ChessPiece.Color.WHITE, "E5");
             b.move(Pawn.class, ChessPiece.Color.WHITE, "E6");
-            //b.move(Pawn.class, ChessPiece.Color.WHITE, "D7");
-            //b.move(Pawn.class, ChessPiece.Color.WHITE, "C8");
-            //b.move(Queen.class, ChessPiece.Color.WHITE, "E2");
+            b.move(Pawn.class, ChessPiece.Color.WHITE, "D7");
+            b.move(Pawn.class, ChessPiece.Color.WHITE, "C8");
+            b.move(Queen.class, ChessPiece.Color.WHITE, "E2");
         } catch(Exception e) {
             // Do nothing
         }

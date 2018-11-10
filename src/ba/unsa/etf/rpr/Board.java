@@ -221,8 +221,11 @@ public class Board {
         if (!praznoPolje(e) && !vrati_boju(provjeri_boju(e2), provjeri_boju(e))) {
             spisak_figura.remove(ind2);// jede se figura koja je bila na starom mjestu
             spisak_figura.get(ind1).move(e); //pomjeramo figuru na novo mjesto
-        } else {
+        } else if(praznoPolje(e)) {
             spisak_figura.get(ind1).move(e);
+        }
+        else{
+            throw new IllegalChessMoveException("Preskače figure");
         }
 
     }
