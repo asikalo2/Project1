@@ -79,7 +79,7 @@ public class Program {
                 else b.move(Pawn.class, ChessPiece.Color.BLACK, polje2);
 
 
-            }while(figura.equals('X'));
+            }while(figura.equals('X') || b.getSpisak_figura().size() == 1);
     }
 }
 
