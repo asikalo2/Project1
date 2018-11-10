@@ -48,7 +48,7 @@ public class RookTest {
     @org.junit.jupiter.api.Test
     void moveIlegal4() {
         Rook r = new Rook("D8", ChessPiece.Color.WHITE);
-        assertDoesNotThrow(
+        assertThrows( IllegalChessMoveException.class,
                 () -> r.move("H4")
         );
     }
