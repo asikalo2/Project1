@@ -9,9 +9,10 @@ import static java.awt.Color.WHITE;
 
 public class Board {
 
-    private List<ChessPiece> spisak_figura = new ArrayList<ChessPiece>();
+    private List<ChessPiece> spisak_figura = new ArrayList<ChessPiece>(); //lista svih figura
 
     public Board() {
+        //postavljanje figura u početnu poziciju;
         spisak_figura.add(new Rook("A1", ChessPiece.Color.WHITE));
         spisak_figura.add(new Rook("H1", ChessPiece.Color.WHITE));
         spisak_figura.add(new Bishop("C1", ChessPiece.Color.WHITE));
@@ -49,8 +50,9 @@ public class Board {
 
 
     public ChessPiece.Color provjeri_boju(String pozicija) {
+        //Vraćamo boju figure koja se nalazi na poziciji 'pozicija', tako što prolazimo kroz sve figure, te ukoliko je
+        //pozicija neke figure u spisku figura jednaka datoj poziciji, vraćamo boju te figure.
         int i = 0;
-        //ChessPiece.Color boja = WHITE;
 
         for (i = 0; i < spisak_figura.size(); i++) {
             if (spisak_figura.get(i).getPosition().equals(pozicija))
@@ -60,21 +62,26 @@ public class Board {
     }
 
     public boolean vrati_boju(ChessPiece.Color c1, ChessPiece.Color c2) {
+        //Provjerava se da li su jednake boje c1 i c2, te se vraća true ako je tačno i false ako je netačno.
         if (c1.equals(c2)) return true;
 
         return false;
     }
 
     public boolean praznoPolje(String s) {
+        //Provjerava se da li je polje, koje se nalazi na poziciji 's' prazno ili je zauzeto, tako što se prolazi
+        //kroz spisak figura, te ukoliko neka figura već sadrži datu poziciju, vraća se false.
         int i = 0;
 
         for (i = 0; i < spisak_figura.size(); i++) {
             if (spisak_figura.get(i).getPosition().equals(s)) return false;
         }
+
         return true;
     }
 
     public boolean preskaceFigure(String pocetnaPozicija, String krajnjaPozicija) {
+        //Provjerava se da li se preskaču figure koje se kreću od početne, ka krajnoj poziciji.
         int i = 0;
 
         int pX = pocetnaPozicija.charAt(0) - 'A';
@@ -109,6 +116,8 @@ public class Board {
     }
 
     public int indeksTrazeneFigureUListi(String e) {
+        //Funkcija vraća indeks tražene figure u listi, tako što se šalje pozicija figure, prolazi se kroz
+        //listu figura i vraća indeks ukoliko je pronađena figura s datom pozicijom.
         int indeks = 0;
         int i = 0;
 
@@ -121,18 +130,15 @@ public class Board {
     }
 
     public List<ChessPiece> getSpisak_figura() {
+        // Vraća se spisak figura.
 
         return spisak_figura;
     }
 
-    public void setSpisak_figura(List<ChessPiece> spisak_figura) {
+    public boolean isCheck(ChessPiece.Color color) {
+        //Funkcija isCheck provjerava da li je igrač, tj. figura King igrača koji je boja 'color' u šahu.
 
-        this.spisak_figura = spisak_figura;
-    }
-
-    public boolean isCheck(ChessPiece.Color boja) {
-
-        if (boja.equals(ChessPiece.Color.WHITE)) {
+        if (color.equals(ChessPiece.Color.WHITE)) {
             for (int i = 0; i < spisak_figura.size(); i++) {
                 if (napadaKralja(spisak_figura.get(i), ChessPiece.Color.BLACK)) {
                     System.out.println("CHECK!!!");
@@ -162,26 +168,30 @@ public class Board {
         }
     }
 
-    private String dajPozicijuKralja(ChessPiece.Color boja) {
+    private String dajPozicijuKralja(ChessPiece.Color color) {
+        //Funkcija vraća poziciju kralja boje 'color'.
         for (int i = 0; i < spisak_figura.size(); i++) {
-            if (spisak_figura.get(i).getClass().equals(King.class) && spisak_figura.get(i).getColor().equals(boja))
+            if (spisak_figura.get(i).getClass().equals(King.class) && spisak_figura.get(i).getColor().equals(color))
                 return spisak_figura.get(i).getPosition();
         }
         return null;
     }
 
-
-    /*void move(Class type, ChessPiece.Color color, String position) pomjera figuru koja pripada klasi type,
-    boje color, na poziciju datu stringom position. Ova metoda treba najprije pronaći figuru tipa type date
-    boje među aktivnim figurama. Zatim treba pozvati njenu metodu move da provjeri da li je poziv legalan.
-    Pošto može biti više figura iste boje i tipa, treba pronaći prvu za koju je potez legalan i povući potez.
-    U slučaju da ne postoji niti jedna figura za koju je potez legalan treba baciti IllegalChessMoveException.
-    Konačno treba provjeriti da li se na odredišnoj poziciji već nalazi figura. Ako se nalazi figura druge boje,
-    ona je "pojedena" i treba je izbaciti, a ako se nalazi figura iste boje treba baciti IllegalChessMoveException.
-    Također treba voditi računa da kraljica, lovac, top i pijuni ne mogu preskakati druge figure.*/
-
-
     public void move(Class type, ChessPiece.Color color, String e4) {
+
+        /*Funkcija move pomjera figuru koja pripada klasi type, boje color, na poziciju datu stringom e4.
+        Ova metoda treba pronalazi figuru tipa type date boje među aktivnim figurama.
+        Pošto može biti više figura iste boje i tipa, pronalazi se pomoću bacanja izuzetka, prva za koju je potez
+        legalan. U slučaju da ne postoji niti jedna figura za koju je potez legalan baca se IllegalChessMoveException.
+
+        Provjerava se da li se na odredišnoj poziciji već nalazi figura, ako se nalazi figura druge boje,
+        ona je "pojedena" i izbacuje se iz liste, a ako se nalazi figura iste boje baca se IllegalChessMoveException.
+        Također, vodi se računa da kraljica, lovac, top i pijuni ne mogu preskakati druge figure.
+
+        U ovoj metodi, obzirom da sam prvo pisala metodu move koje se preklapa sa ovom, pozivam tu metodu, u kojoj je
+        implementirano detaljno pozivanje, te izvšene sve provjere. Nisam pisala ponovo, zbog nepotrebnog ponavljanja
+        koda.*/
+
         int i = 0;
         boolean prosao = false;
         for (i = 0; i < spisak_figura.size(); i++) {
@@ -197,6 +207,8 @@ public class Board {
     }
 
     public void move(String e2, String e) {
+        //Metoda move vrši sve provjere kao i prva metoda move, samo što u ovom slučaju pomjera se figura sa pozicije
+        //e2 na poziciju e.
         int i = 0;
         int ind1 = 0;
         int ind2 = 0;
