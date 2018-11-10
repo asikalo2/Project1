@@ -16,8 +16,8 @@ class BoardTest {
                     b.move(Pawn.class, ChessPiece.Color.WHITE, "E4");
                     b.move(Bishop.class, ChessPiece.Color.WHITE, "A6");
                     b.move(Knight.class, ChessPiece.Color.WHITE, "C3");
-                    //b.move(King.class, ChessPiece.Color.WHITE, "E2");
-                    //b.move(King.class, ChessPiece.Color.WHITE, "E3");
+                    b.move(King.class, ChessPiece.Color.WHITE, "E2");
+                    b.move(King.class, ChessPiece.Color.WHITE, "E3");
                 }
         );
     }
@@ -266,4 +266,73 @@ class BoardTest {
                 }
         );
     }
+
+    @Test
+        // Check by queen
+    void isCheck14() {
+        Board b = new Board();
+        try {
+            b.move("E2", "E4");
+            b.move("F1", "B4");
+            b.move("D1", "H5");
+            b.move("H5", "F7");
+        } catch(Exception e) {
+            // Do nothing
+        }
+        assertTrue(b.isCheck(ChessPiece.Color.BLACK));
+    }
+
+    @Test
+        // Check by queen
+    void isCheck15() {
+        Board b = new Board();
+        try {
+            b.move("C2", "C4");
+            b.move("D1", "B3");
+            b.move("E2", "E4");
+            b.move("F1", "E2");
+            b.move("E2", "H5");
+            b.move("B3", "F7");
+        } catch(Exception e) {
+            // Do nothing
+        }
+        assertTrue(b.isCheck(ChessPiece.Color.BLACK));
+    }
+
+    @Test
+        // Check by queen
+    void isCheck16() {
+        Board b = new Board();
+        try {
+            b.move("E2", "E3");
+            b.move("D1", "H5");
+            b.move("G1", "F3");
+            b.move("F3", "E5");
+            b.move("H5", "F7");
+        } catch(Exception e) {
+            // Do nothing
+        }
+        assertTrue(b.isCheck(ChessPiece.Color.BLACK));
+    }
+    @Test
+        // Check by queen
+    void isCheckUsable2() {
+        Board b = new Board();
+        try {
+            b.move("C2", "C4");
+            b.move("C4", "C5");
+            b.move("C5", "C6");
+            b.move("C6", "D7");
+            b.move("D1", "D8");
+        } catch(Exception e) {
+            // Do nothing
+        }
+        b.isCheck(ChessPiece.Color.BLACK);
+        assertDoesNotThrow(
+                () -> {
+                    b.move("E2", "D3");
+                }
+        );
+    }
+
 }
