@@ -6,26 +6,74 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 public class RookTest {
 
     @org.junit.jupiter.api.Test
-    void moveDiagonal() {
-        King k = new King("E1", ChessPiece.Color.WHITE);
+    void moveRight() {
+        Rook r = new Rook("D1", ChessPiece.Color.WHITE);
         assertDoesNotThrow(
-                () -> k.move("D2")
+                () -> r.move("H1")
         );
     }
 
     @org.junit.jupiter.api.Test
-    void moveTwo() {
-        King k = new King("C2", ChessPiece.Color.BLACK);
+    void moveLeft() {
+        Rook r = new Rook("H1", ChessPiece.Color.WHITE);
+        assertDoesNotThrow(
+                () -> r.move("A1")
+        );
+    }
+
+    @org.junit.jupiter.api.Test
+    void moveIlegal() {
+        Rook r = new Rook("D1", ChessPiece.Color.WHITE);
         assertThrows( IllegalChessMoveException.class,
-                () -> k.move("E2")
+                () -> r.move("A4")
+        );
+    }
+
+    @org.junit.jupiter.api.Test
+    void moveIlegal2() {
+        Rook r = new Rook("D1", ChessPiece.Color.WHITE);
+        assertThrows( IllegalChessMoveException.class,
+                () -> r.move("H5")
+        );
+    }
+
+    @org.junit.jupiter.api.Test
+    void moveIlegal3() {
+        Rook r = new Rook("D8", ChessPiece.Color.BLACK);
+        assertThrows( IllegalChessMoveException.class,
+                () -> r.move("A5")
+        );
+    }
+
+    @org.junit.jupiter.api.Test
+    void moveIlegal4() {
+        Rook r = new Rook("D8", ChessPiece.Color.WHITE);
+        assertDoesNotThrow(
+                () -> r.move("H4")
+        );
+    }
+
+    @org.junit.jupiter.api.Test
+    void moveForward() {
+        Rook r = new Rook("D1", ChessPiece.Color.WHITE);
+        assertDoesNotThrow(
+                () -> r.move("D7")
+        );
+    }
+
+    @org.junit.jupiter.api.Test
+    void moveIlegal5() {
+        Rook r = new Rook("C2", ChessPiece.Color.BLACK);
+        assertThrows( IllegalChessMoveException.class,
+                () -> r.move("E3")
         );
     }
 
     @org.junit.jupiter.api.Test
     void moveBack() {
-        King k = new King("E3", ChessPiece.Color.WHITE);
+        Rook r = new Rook("E6", ChessPiece.Color.WHITE);
         assertDoesNotThrow(
-                () -> k.move("E2")
+                () -> r.move("E2")
         );
     }
 
@@ -33,7 +81,7 @@ public class RookTest {
     void constructor1() {
         assertThrows(
                 IllegalArgumentException.class,
-                () -> new King("I2", ChessPiece.Color.WHITE)
+                () -> new Rook("I2", ChessPiece.Color.WHITE)
         );
     }
 
@@ -41,7 +89,7 @@ public class RookTest {
     void constructor2() {
         assertThrows(
                 IllegalArgumentException.class,
-                () -> new King("B9", ChessPiece.Color.WHITE)
+                () -> new Rook("B9", ChessPiece.Color.WHITE)
         );
     }
 
@@ -49,34 +97,34 @@ public class RookTest {
     void constructor3() {
         assertThrows(
                 IllegalArgumentException.class,
-                () -> new King("", ChessPiece.Color.WHITE)
+                () -> new Rook("", ChessPiece.Color.WHITE)
         );
     }
 
     @org.junit.jupiter.api.Test
     void moveIllegal1() {
-        King k = new King("C1", ChessPiece.Color.BLACK);
+        Rook r = new Rook("C1", ChessPiece.Color.BLACK);
         assertThrows(
                 IllegalArgumentException.class,
-                () -> k.move("C0")
+                () -> r.move("C0")
         );
     }
 
     @org.junit.jupiter.api.Test
     void moveIllegal2() {
-        King k = new King("H1", ChessPiece.Color.BLACK);
+        Rook r = new Rook("H1", ChessPiece.Color.BLACK);
         assertThrows(
                 IllegalArgumentException.class,
-                () -> k.move("I1")
+                () -> r.move("I1")
         );
     }
 
     @org.junit.jupiter.api.Test
     void moveIllegal3() {
-        King k = new King("C1", ChessPiece.Color.BLACK);
+        Rook r = new Rook("C1", ChessPiece.Color.BLACK);
         assertThrows(
                 IllegalArgumentException.class,
-                () -> k.move("")
+                () -> r.move("")
         );
     }
 }
