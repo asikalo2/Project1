@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="992aba34-5bb5-4ebc-a76c-cedfa98b0117" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ba/unsa/etf/rpr/QueenTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/ba/unsa/etf/rpr/QueenTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ba/unsa/etf/rpr/BishopTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/ba/unsa/etf/rpr/BishopTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,14 +32,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="9455" />
-          <entry key="txt" value="891" />
+          <entry key="java" value="9506" />
+          <entry key="txt" value="931" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="9455" />
-          <entry key="PLAIN_TEXT" value="891" />
+          <entry key="JAVA" value="9506" />
+          <entry key="PLAIN_TEXT" value="931" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -106,18 +106,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/ba/unsa/etf/rpr/QueenTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/ba/unsa/etf/rpr/KingTest.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -139,11 +127,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/ba/unsa/etf/rpr/BishopTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="81" column="1" selection-start-line="81" selection-start-column="1" selection-end-line="81" selection-end-column="1" />
+            <state relative-caret-position="272">
+              <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -180,8 +168,8 @@
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Board.java" />
         <option value="$PROJECT_DIR$/test/ba/unsa/etf/rpr/BoardTest.java" />
         <option value="$PROJECT_DIR$/test/ba/unsa/etf/rpr/RookTest.java" />
-        <option value="$PROJECT_DIR$/test/ba/unsa/etf/rpr/BishopTest.java" />
         <option value="$PROJECT_DIR$/test/ba/unsa/etf/rpr/QueenTest.java" />
+        <option value="$PROJECT_DIR$/test/ba/unsa/etf/rpr/BishopTest.java" />
       </list>
     </option>
   </component>
@@ -244,7 +232,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541868888363" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541869356606" />
     <property name="last_opened_file_path" value="$USER_HOME$/Documents" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -267,7 +255,21 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.[engine:junit-jupiter]/[class:ba.unsa.etf.rpr.QueenTest]">
+  <component name="RunManager" selected="JUnit.BishopTest">
+    <configuration name="BishopTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rpr-zadaca1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ba.unsa.etf.rpr.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ba.unsa.etf.rpr" />
+      <option name="MAIN_CLASS_NAME" value="ba.unsa.etf.rpr.BishopTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BoardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rpr-zadaca1" />
       <extension name="coverage">
@@ -278,25 +280,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="ba.unsa.etf.rpr" />
       <option name="MAIN_CLASS_NAME" value="ba.unsa.etf.rpr.BoardTest" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BoardTest.someLegalMoves" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="rpr-zadaca1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ba.unsa.etf.rpr.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ba.unsa.etf.rpr" />
-      <option name="MAIN_CLASS_NAME" value="ba.unsa.etf.rpr.BoardTest" />
-      <option name="METHOD_NAME" value="someLegalMoves" />
-      <option name="TEST_OBJECT" value="method" />
-      <uniqueIds>
-        <uniqueId value="[engine:junit-jupiter]/[class:ba.unsa.etf.rpr.BoardTest]" />
-      </uniqueIds>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -353,19 +336,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.BoardTest.someLegalMoves" />
       <item itemvalue="JUnit.[engine:junit-jupiter]/[class:ba.unsa.etf.rpr.BoardTest]" />
       <item itemvalue="JUnit.BoardTest" />
       <item itemvalue="JUnit.QueenTest" />
       <item itemvalue="JUnit.[engine:junit-jupiter]/[class:ba.unsa.etf.rpr.QueenTest]" />
+      <item itemvalue="JUnit.BishopTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BishopTest" />
         <item itemvalue="JUnit.[engine:junit-jupiter]/[class:ba.unsa.etf.rpr.QueenTest]" />
         <item itemvalue="JUnit.QueenTest" />
         <item itemvalue="JUnit.BoardTest" />
         <item itemvalue="JUnit.[engine:junit-jupiter]/[class:ba.unsa.etf.rpr.BoardTest]" />
-        <item itemvalue="JUnit.BoardTest.someLegalMoves" />
       </list>
     </recent_temporary>
   </component>
@@ -390,7 +373,7 @@
       <workItem from="1541626452629" duration="2577000" />
       <workItem from="1541711694395" duration="539000" />
       <workItem from="1541773651221" duration="793000" />
-      <workItem from="1541836799682" duration="22235000" />
+      <workItem from="1541836799682" duration="22734000" />
     </task>
     <task id="LOCAL-00001" summary="Added classes for all the chess pieces.">
       <created>1541262237661</created>
@@ -518,19 +501,17 @@
       <option name="project" value="LOCAL" />
       <updated>1541868537108</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="dodavanje testova za klasu Queen">
+      <created>1541868938332</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1541868938332</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="[engine_junit-jupiter]_[class_ba_unsa_etf_rpr_BoardTest] - 2018.11.10 at 17h 14m 38s.xml">
-      <configuration name="[engine:junit-jupiter]/[class:ba.unsa.etf.rpr.BoardTest]" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BoardTest - 2018.11.10 at 17h 32m 18s.xml">
-      <configuration name="BoardTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="QueenTest - 2018.11.10 at 17h 49m 21s.xml">
-      <configuration name="QueenTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="[engine_junit-jupiter]_[class_ba_unsa_etf_rpr_QueenTest] - 2018.11.10 at 17h 50m 13s.xml">
       <configuration name="[engine:junit-jupiter]/[class:ba.unsa.etf.rpr.QueenTest]" configurationId="JUnit" />
     </history-entry>
@@ -552,9 +533,18 @@
     <history-entry file="[engine_junit-jupiter]_[class_ba_unsa_etf_rpr_QueenTest] - 2018.11.10 at 17h 53m 29s.xml">
       <configuration name="[engine:junit-jupiter]/[class:ba.unsa.etf.rpr.QueenTest]" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="[engine_junit-jupiter]_[class_ba_unsa_etf_rpr_QueenTest] - 2018.11.10 at 17h 54m 51s.xml">
+      <configuration name="[engine:junit-jupiter]/[class:ba.unsa.etf.rpr.QueenTest]" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="[engine_junit-jupiter]_[class_ba_unsa_etf_rpr_QueenTest] - 2018.11.10 at 17h 58m 24s.xml">
+      <configuration name="[engine:junit-jupiter]/[class:ba.unsa.etf.rpr.QueenTest]" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BishopTest - 2018.11.10 at 17h 58m 38s.xml">
+      <configuration name="BishopTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48385000" />
+    <option name="totallyTimeSpent" value="48884000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
@@ -569,7 +559,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295082" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924013" visible="true" weight="0.3295082" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924013" weight="0.3295082" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -578,7 +568,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007599" side_tool="true" weight="0.3295082" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.3295082" />
+      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.3295082" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -645,7 +635,8 @@
     <MESSAGE value="ispravljanje funkcije move" />
     <MESSAGE value="ispravljanje funkcija koje su bile pogrešne unutar klase Board, ili onih koje su se mogle kraće napisati, te manja ispravljanja unutar klasa gdje su figure, koje se tiču funkcije move" />
     <MESSAGE value="kreiranje testova za svaku klasu za koju nije bilo napravljeno,&#10;te podesavanje testa za klasu Queen." />
-    <option name="LAST_COMMIT_MESSAGE" value="kreiranje testova za svaku klasu za koju nije bilo napravljeno,&#10;te podesavanje testa za klasu Queen." />
+    <MESSAGE value="dodavanje testova za klasu Queen" />
+    <option name="LAST_COMMIT_MESSAGE" value="dodavanje testova za klasu Queen" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -907,16 +898,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/ba/unsa/etf/rpr/BishopTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="81" column="1" selection-start-line="81" selection-start-column="1" selection-end-line="81" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/ba/unsa/etf/rpr/RookTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="327">
@@ -936,8 +917,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/ba/unsa/etf/rpr/QueenTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+        <state relative-caret-position="85">
+          <caret line="38" column="10" lean-forward="true" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/ba/unsa/etf/rpr/BishopTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
