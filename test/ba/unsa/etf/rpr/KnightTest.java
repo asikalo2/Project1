@@ -16,16 +16,14 @@ class KnightTest {
     @Test
     void moveRight() {
         Knight k = new Knight("D1", ChessPiece.Color.WHITE);
-        assertThrows(
-                IllegalArgumentException.class,
+        assertThrows( IllegalChessMoveException.class,
                 () -> k.move("H1")
         );
     }
     @Test
     void moveForward() {
             Knight k = new Knight("A1", ChessPiece.Color.WHITE);
-            assertThrows(
-                    IllegalArgumentException.class,
+        assertThrows( IllegalChessMoveException.class,
                     () -> k.move("A3")
         );
     }
@@ -33,8 +31,7 @@ class KnightTest {
     @Test
     void moveLeft() {
         Knight k = new Knight("H1", ChessPiece.Color.WHITE);
-        assertThrows(
-                    IllegalArgumentException.class,
+        assertThrows( IllegalChessMoveException.class,
                     () -> k.move("D1")
             );
     }
@@ -42,8 +39,7 @@ class KnightTest {
     @org.junit.jupiter.api.Test
     void moveDiagonal12() {
         Knight k = new Knight("B1", ChessPiece.Color.WHITE);
-            assertThrows(
-                    IllegalArgumentException.class,
+        assertThrows( IllegalChessMoveException.class,
                     () -> k.move("H5")
             );
     }
@@ -51,8 +47,7 @@ class KnightTest {
     @org.junit.jupiter.api.Test
     void moveDiagonall() {
         Knight k = new Knight("B8", ChessPiece.Color.BLACK);
-        assertThrows(
-                IllegalArgumentException.class,
+        assertThrows( IllegalChessMoveException.class,
                     () -> k.move("A5")
             );
     }

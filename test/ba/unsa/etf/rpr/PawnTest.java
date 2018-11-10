@@ -12,44 +12,42 @@ class PawnTest {
         );
     }
 
-
-
     @org.junit.jupiter.api.Test
     void moveRight() {
-        Pawn p = new Pawn("D1", ChessPiece.Color.WHITE);
-        assertDoesNotThrow(
-                () -> p.move("H1")
+        Pawn p = new Pawn("D2", ChessPiece.Color.WHITE);
+        assertThrows( IllegalChessMoveException.class,
+                () -> p.move("H2")
         );
     }
 
     @org.junit.jupiter.api.Test
     void moveLeft() {
-        Pawn p = new Pawn("H1", ChessPiece.Color.WHITE);
-        assertDoesNotThrow(
-                () -> p.move("A1")
+        Pawn p = new Pawn("H2", ChessPiece.Color.WHITE);
+        assertThrows( IllegalChessMoveException.class,
+                () -> p.move("A2")
         );
     }
 
     @org.junit.jupiter.api.Test
     void moveDiagonal1() {
-        Pawn p = new Pawn("D1", ChessPiece.Color.WHITE);
-        assertDoesNotThrow(
-                () -> p.move("A4")
+        Pawn p = new Pawn("D2", ChessPiece.Color.WHITE);
+        assertThrows( IllegalChessMoveException.class,
+                () -> p.move("A5")
         );
     }
 
     @org.junit.jupiter.api.Test
     void moveDiagonal12() {
-        Pawn p = new Pawn("D1", ChessPiece.Color.WHITE);
-        assertDoesNotThrow(
-                () -> p.move("H5")
+        Pawn p = new Pawn("D2", ChessPiece.Color.WHITE);
+        assertThrows( IllegalChessMoveException.class,
+                () -> p.move("H6")
         );
     }
 
     @org.junit.jupiter.api.Test
     void moveDiagonal3() {
         Pawn p = new Pawn("D8", ChessPiece.Color.BLACK);
-        assertDoesNotThrow(
+        assertThrows( IllegalChessMoveException.class,
                 () -> p.move("A5")
         );
     }
@@ -57,15 +55,15 @@ class PawnTest {
     @org.junit.jupiter.api.Test
     void moveDiagonal32() {
         Pawn p = new Pawn("D8", ChessPiece.Color.WHITE);
-        assertDoesNotThrow(
+        assertThrows( IllegalChessMoveException.class,
                 () -> p.move("H4")
         );
     }
 
     @org.junit.jupiter.api.Test
     void moveForward() {
-        Pawn p = new Pawn("D1", ChessPiece.Color.WHITE);
-        assertDoesNotThrow(
+        Pawn p = new Pawn("D2", ChessPiece.Color.WHITE);
+        assertThrows( IllegalChessMoveException.class,
                 () -> p.move("D7")
         );
     }
@@ -89,7 +87,7 @@ class PawnTest {
     @org.junit.jupiter.api.Test
     void moveBack() {
         Pawn p = new Pawn("E6", ChessPiece.Color.WHITE);
-        assertDoesNotThrow(
+        assertThrows( IllegalChessMoveException.class,
                 () -> p.move("E2")
         );
     }
