@@ -81,7 +81,11 @@ public class Board {
     }
 
     public boolean preskaceFigure(String pocetnaPozicija, String krajnjaPozicija) {
-        //Provjerava se da li se preskaču figure koje se kreću od početne, ka krajnoj poziciji.
+        //Ova funkcija provjerava zauzetost svih polja izmedju početne i krajnje pozicije tako sto
+        // koristi pomjeranje za po jedno polje duž pravca određenog tim dvjema tackama. Nagib pravca je
+        // određen priraštaj ima dx i dy po x i y osi,
+        // a Inkrementalni pomak je onda normirani na vrijednosti -1, 0 ili 1.
+
         int i = 0;
 
         int pX = pocetnaPozicija.charAt(0) - 'A';
