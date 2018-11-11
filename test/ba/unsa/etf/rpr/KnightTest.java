@@ -89,7 +89,7 @@ class KnightTest {
     void constructor1() {
         assertThrows(
                 IllegalArgumentException.class,
-                () -> new Queen("I2", ChessPiece.Color.WHITE)
+                () -> new Knight("I2", ChessPiece.Color.WHITE)
         );
     }
 
@@ -97,7 +97,7 @@ class KnightTest {
     void constructor2() {
         assertThrows(
                 IllegalArgumentException.class,
-                () -> new Queen("B9", ChessPiece.Color.WHITE)
+                () -> new Knight("B9", ChessPiece.Color.WHITE)
         );
     }
 
@@ -105,7 +105,7 @@ class KnightTest {
     void constructor3() {
         assertThrows(
                 IllegalArgumentException.class,
-                () -> new Queen("", ChessPiece.Color.WHITE)
+                () -> new Knight("", ChessPiece.Color.WHITE)
         );
     }
 

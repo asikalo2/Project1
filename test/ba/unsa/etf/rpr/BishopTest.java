@@ -97,7 +97,7 @@ public class BishopTest {
     void constructor2() {
         assertThrows(
                 IllegalArgumentException.class,
-                () -> new King("B9", ChessPiece.Color.WHITE)
+                () -> new Bishop("B9", ChessPiece.Color.WHITE)
         );
     }
 
